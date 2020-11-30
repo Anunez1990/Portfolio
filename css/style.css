@@ -1,3 +1,4 @@
+
 body {
     overflow-x: hidden;
 }
@@ -15,7 +16,6 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    outline: 0;
     color: #2196F3;
 }
 
@@ -30,18 +30,23 @@ h6 {
     font-weight: 700;
 }
 
-hr {
+hr{
     margin: 15px auto 25px;
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 4px;
+    border-top: solid white 10px;
+}
+/*---------------------------
+            Header
+----------------------------*/
+.navbar{
+    padding-left: 7%;
+    padding-right: 7%
 }
 
-hr.star-light,
-hr.star-primary {
-    overflow: visible; /* For IE */
-    text-align: center;
+.menu{
+    background: #29455b;
 }
 
 hr.star-light:after,
@@ -113,8 +118,8 @@ header .intro-text .skills {
     }
 
     #contact{
-        margin-left:5%;
-        margin-right:5%;
+        margin-left:17%;
+        margin-right:17%;
     }
 
     header .intro-text .name {
@@ -126,14 +131,6 @@ header .intro-text .skills {
     }
 }
 
-.navbar{
-    padding-left: 7%;
-    padding-right: 7%
-}
-
-.menu{
-    background: #29455b;
-}
 
 @media(min-width:768px) {
     .navbar-fixed-top {
@@ -322,7 +319,7 @@ section.tout {
     transition: top .3s ease,opacity .3s ease;
 }
 
-.floating-label-form-group::not(:first-child) {
+.floating-label-form-group:not(:first-child) {
     padding-left: 14px;
     border-left: 1px solid #eee;
 }
@@ -462,59 +459,4 @@ footer .footer-below {
 
 .navbar-nav>.active>a {
     background-color: #29455b !important;
-}
-
-/* Fix modal mouse wheel issues */
-/* https://github.com/twbs/bootstrap/issues/16297 */
-.modal.fade.in {
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-
-header img.profile-img {
-    max-width: 240px;
-    border-radius: 50%;
-    border: 0.4em solid rgba(255, 255, 255, 0.75);
-}
-
-header .intro-text .name {
-    font-size: 2.25em;
-}
-
-@media (max-width: 991px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-    /* since 3.1.0 */
-    .navbar-collapse.collapse.in {
-        display: block!important;
-    }
-    .collapsing {
-        overflow: hidden!important;
-    }
 }
