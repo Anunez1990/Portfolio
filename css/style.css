@@ -275,6 +275,12 @@ footer .footer-below {
         border-top: solid 0.00001rem #a2a5a5;
         padding-left: 2%;
     }
+}
 
+@media(max-width:300px) {
 
+    /*NAVIGATION BAR*/
+    .container .navbar .navbar-brand {
+        font-size: 0.85em;
+    }
 }
