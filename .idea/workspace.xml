@@ -10,9 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Modifying header">
+    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Modifying mobile view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
       <workItem from="1606752758961" duration="6315000" />
       <workItem from="1606775037438" duration="7127000" />
       <workItem from="1606843460104" duration="27580000" />
+      <workItem from="1606941432739" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Creating Portfolio's main structure">
       <created>1606752850118</created>
@@ -114,13 +116,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feature: Creating Portfolio's main structure" />
     <MESSAGE value="Feature: Fixing style sheet" />
     <MESSAGE value="Feature: Main structure finished" />
     <MESSAGE value="Feature: Modifying header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Modifying header" />
+    <MESSAGE value="Feature: Modifying mobile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Modifying mobile view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606753075494">
@@ -139,5 +143,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1606877744937" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606885036246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606885036246" />
   </component>
 </project>
