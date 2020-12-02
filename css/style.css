@@ -160,6 +160,63 @@ header{
     border-top: solid 4px #29455b;
 }
 
+/*--------SKILLS BAR-------*/
+.row .skill-topic{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+section:nth-of-type(2) .bar {
+    align-items: flex-end;
+    background-color: #e2a88b;
+    color: #090808;
+    font-size: 15pt;
+    height: 30px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+ .flex {
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+section .flex-50-gt-sm {
+    display: block;
+}
+
+section:nth-of-type(2) .bar:nth-child(1) .fill {
+    transition: 1.1s 0.2s width ease-in-out;
+}
+
+section:nth-of-type(2) .bar.fill {
+     left: 0;
+     position: absolute;
+     top: 0;
+     background-color: #00a1a7;
+     opacity: 1;
+     height: 30px;
+ }
+
+section:nth-of-type(2) .bar .tag {
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-color: #04c2c9;
+    color: #fff;
+    height: 30px;
+    width: 110px;
+    margin-bottom: 55px;
+}
+
+section:nth-of-type(2) .bar span {
+     padding: 0 15px 0 0;
+     display: initial;
+     z-index: 1;
+ }
+
 /*---------------------------
          Contact Section
 ----------------------------*/
@@ -171,6 +228,9 @@ header{
     border: 0;
     max-width: 260px;
     border-top: solid 4px #29455b;
+}
+.btn-success{
+    margin-left: 20%;
 }
 /*---------------------------
          Footer Section
