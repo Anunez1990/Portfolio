@@ -144,6 +144,9 @@ header{
     max-width: 260px;
     border-top: solid 4px #29455b;
 }
+#about h3{
+    color: #29455b;
+}
 
 /*---------------------------
          Skills Section
@@ -317,7 +320,7 @@ footer .footer-below {
     }
 
     .profile-img{
-        margin-top: 7%;
+        margin-top: 10%;
         margin-bottom: 2%;
         border-radius: 50%;
         border: solid 7px #c5e1ee;
@@ -335,10 +338,23 @@ footer .footer-below {
         border-top: solid 0.00001rem #a2a5a5;
         padding-left: 2%;
     }
+
+    /*SKILLS SECTION*/
+    .row .skill-topic{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    section:nth-of-type(2) .bar {
+        font-size: 12pt;
+    }
+
+    section:nth-of-type(2) .bar span {
+        padding: 0 8px 0 0;
+    }
 }
 
 @media(max-width:300px) {
-
     /*NAVIGATION BAR*/
     .container .navbar .navbar-brand {
         font-size: 0.85em;
