@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Modifying mobile view">
+    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Creating About section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -63,7 +63,7 @@
       <workItem from="1606752758961" duration="6315000" />
       <workItem from="1606775037438" duration="7127000" />
       <workItem from="1606843460104" duration="27580000" />
-      <workItem from="1606941432739" duration="6102000" />
+      <workItem from="1606941432739" duration="12451000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Creating Portfolio's main structure">
       <created>1606752850118</created>
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606942822240</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Feature: Creating About section">
+      <created>1606957210681</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606957210681</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +139,8 @@
     <MESSAGE value="Feature: Modifying header" />
     <MESSAGE value="Feature: Modifying mobile view" />
     <MESSAGE value="Feature: Adding skill bars" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Adding skill bars" />
+    <MESSAGE value="Feature: Creating About section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Creating About section" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606753075494">
@@ -143,10 +151,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="522" y="241" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1606877356342" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1606944452564">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1606957234967">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606944452564" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606957234967" />
     <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606877744937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

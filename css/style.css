@@ -148,6 +148,11 @@ header{
     color: #29455b;
 }
 
+.summary{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
 /*---------------------------
          Skills Section
 ----------------------------*/
