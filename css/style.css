@@ -35,7 +35,9 @@ hr{
 }
 
 .menu{
-    background: #29455b;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100px;
     width: 100%;
 }
@@ -105,7 +107,7 @@ hr{
             Introduction
 ----------------------------*/
 header{
-    background-color: #2196F3;
+    background-image: url(../pictures/web-design-15.jpg);
     padding-top: 8%;
     padding-bottom: 3%;
 }
@@ -148,11 +150,16 @@ header{
     color: #29455b;
 }
 
+.summary{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
 /*---------------------------
          Skills Section
 ----------------------------*/
 #skills{
-    background-color: #eaf1f1;
+    background-color: #a3a7ab57;
     padding-top: 4%;
     padding-bottom: 4%;
 }
@@ -171,7 +178,7 @@ header{
 
 section:nth-of-type(2) .bar {
     align-items: flex-end;
-    background-color: #e2a88b;
+    background-color: #a2a5a5;
     color: #090808;
     font-size: 15pt;
     height: 30px;
@@ -198,7 +205,7 @@ section:nth-of-type(2) .bar.fill {
      left: 0;
      position: absolute;
      top: 0;
-     background-color: #00a1a7;
+     background-color: #2b89ea;
      opacity: 1;
      height: 30px;
  }
@@ -207,7 +214,7 @@ section:nth-of-type(2) .bar .tag {
     left: 0;
     position: absolute;
     top: 0;
-    background-color: #04c2c9;
+    background-color: #343a40;
     color: #fff;
     height: 30px;
     width: 110px;
@@ -248,7 +255,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #285172;
+    background-color: #090808;
 }
 
 footer .footer-col {
@@ -257,7 +264,12 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #29455b;
+    background-color: #000000;
+}
+
+.form-group .btn-success{
+    background: #007bff;
+    border: #ffffff;
 }
 
 /*---------------------------
@@ -313,7 +325,6 @@ footer .footer-below {
 
     /*DEVELOPER INFORMATION*/
     .menu{
-        background: #29455b;
         height: 65px;
         width: 100%;
         transition: all 0.5s ease-out;
@@ -333,7 +344,9 @@ footer .footer-below {
 
     /*COLLAPSABLE MENU*/
     .navbar-collapse{
-        background-color: #052c47;
+        background: #232526;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         margin-top: 2.75%;
         border-top: solid 0.00001rem #a2a5a5;
         padding-left: 2%;
