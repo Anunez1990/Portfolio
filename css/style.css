@@ -107,7 +107,7 @@ hr{
             Introduction
 ----------------------------*/
 header{
-    background-image: url(../pictures/web-design-15.jpg);
+    background: url(../pictures/project_1.jpg) no-repeat top center/cover;
     padding-top: 8%;
     padding-bottom: 3%;
 }
@@ -116,10 +116,10 @@ header{
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 50%;
-    border: solid 7px #c5e1ee;
+    border: solid 7px white;
 }
 .intro-text h2,h3{
-    color: white;
+    color: black;
 }
 
 .name, .major{
@@ -296,6 +296,50 @@ footer .footer-below {
 .scroll-top .btn:focus {
     outline: 0;
 }
+/*-------------------------------------
+            PROJECTS
+--------------------------------------*/
+
+.projects{
+    width: 100%;
+    height: 450px;
+    background: url(../pictures/project_1.jpg) no-repeat top center/cover;
+    position: relative;
+}
+
+.projects-tittle{
+    padding-top: 5%;
+}
+
+.projects-tittle h1{
+    color: white;
+}
+
+.projects-list{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.project-column{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.card-header{
+    width: 100%;
+    height: 250px;
+}
+
+.project-image1{
+    background: url(../pictures/Project3.PNG) no-repeat top center/cover;
+}
+
+.project-image2{
+    background: url(../pictures/Project2.PNG) no-repeat top center/cover;
+}
+
+.project-image3{
+    background: url(../pictures/Project1.PNG) no-repeat top center/cover;
+}
 
 /*-------------------------------------
             SMALL VIEWS
@@ -334,11 +378,9 @@ footer .footer-below {
         margin-top: 10%;
         margin-bottom: 2%;
         border-radius: 50%;
-        border: solid 7px #c5e1ee;
     }
 
     .name, .major{
-        font-family: 'Balsamiq Sans', cursive;
         font-size: 1.8em;
     }
 
@@ -364,6 +406,24 @@ footer .footer-below {
 
     section:nth-of-type(2) .bar span {
         padding: 0 8px 0 0;
+    }
+
+    /*PROJECTS*/
+    .projects-tittle{
+        margin-top: 20%;
+    }
+
+    .project-column{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card-body h3 a{
+        font-size: 20px;
+    }
+    .card-body{
+        padding-right: 5px;
+        padding-left: 5px;
     }
 }
 
