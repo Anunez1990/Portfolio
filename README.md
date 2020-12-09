@@ -10,6 +10,6 @@ Links:
 * GITHUB:
 https://an74njit.github.io/Portfolio/
 * PROJECT  MOCKUP
-https://drive.google.com/drive/u/2/my-drive
+https://drive.google.com/file/d/1YH3OffRWPXbB1OtgP0UwscXXQVrCxt2z/view?usp=sharing
 
      ![pdf](pictures/Portfolio.pdf)
