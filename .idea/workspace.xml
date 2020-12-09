@@ -10,11 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Adding projects description">
-      <change afterPath="$PROJECT_DIR$/pictures/Project4.PNG" afterDir="false" />
+    <list default="true" id="e81deb39-7ec4-4e6c-8077-5253d06bc7f0" name="Default Changelist" comment="Feature: Adding Readme file">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/Portfolio.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/projects.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
       <workItem from="1606941432739" duration="12540000" />
       <workItem from="1607180278015" duration="25346000" />
       <workItem from="1607264832289" duration="7114000" />
-      <workItem from="1607554462181" duration="278000" />
+      <workItem from="1607554462181" duration="1093000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Creating Portfolio's main structure">
       <created>1606752850118</created>
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607292324814</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Feature: Adding Readme file">
+      <created>1607554788515</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607554788515</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +181,8 @@
     <MESSAGE value="Feature: Fixing Website appearance" />
     <MESSAGE value="Feature: Adding project to the projects.html file" />
     <MESSAGE value="Feature: Adding projects description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Adding projects description" />
+    <MESSAGE value="Feature: Adding Readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Adding Readme file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606753075494">
