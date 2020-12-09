@@ -341,6 +341,10 @@ footer .footer-below {
     background: url(../pictures/Project1.PNG) no-repeat top center/cover;
 }
 
+.project-image4{
+    background: url(../pictures/Project4.PNG) no-repeat top center/cover;
+}
+
 .project-column p{
     margin-top: 30px;
 }
