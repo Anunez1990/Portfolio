@@ -13,8 +13,7 @@ p.small {
 
 h1,
 h2
- {
-    text-transform: uppercase;
+{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
@@ -118,13 +117,25 @@ header{
     border-radius: 50%;
     border: solid 7px white;
 }
-.intro-text h2,h3{
-    color: black;
+
+.name{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 3.2em;
 }
 
-.name, .major{
-    font-family: Helvetica,sans-serif;
+.major{
+    font-family: 'Oleo Script', cursive;
     font-size: 2.2em;
+}
+
+.sections{
+    font-family: Montserrat,sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.about, h3{
+    font-family: 'Oleo Script', cursive;
 }
 
 .intro-text hr{
@@ -186,12 +197,12 @@ section:nth-of-type(2) .bar {
     margin-bottom: 15px;
 }
 
- .flex {
-     align-items: center;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
- }
+.flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 section .flex-50-gt-sm {
     display: block;
@@ -202,13 +213,13 @@ section:nth-of-type(2) .bar:nth-child(1) .fill {
 }
 
 section:nth-of-type(2) .bar.fill {
-     left: 0;
-     position: absolute;
-     top: 0;
-     background-color: #2b89ea;
-     opacity: 1;
-     height: 30px;
- }
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-color: #2b89ea;
+    opacity: 1;
+    height: 30px;
+}
 
 section:nth-of-type(2) .bar .tag {
     left: 0;
@@ -222,10 +233,10 @@ section:nth-of-type(2) .bar .tag {
 }
 
 section:nth-of-type(2) .bar span {
-     padding: 0 15px 0 0;
-     display: initial;
-     z-index: 1;
- }
+    padding: 0 15px 0 0;
+    display: initial;
+    z-index: 1;
+}
 
 /*---------------------------
          Contact Section
