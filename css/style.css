@@ -127,8 +127,9 @@ header{
 }
 
 .intro-text hr{
-    border: 0;
-    max-width: 170px;
+    max-width: 350px;
+    border-top: solid 4px #212529;
+
 }
 
 
@@ -182,6 +183,11 @@ header{
          Skills Section
 ----------------------------*/
 
+.row .skill-topic {
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+}
+
 #skills .col-lg-12 hr{
     border: 0;
     max-width: 260px;
@@ -204,6 +210,7 @@ section:nth-of-type(3) .bar {
 section:nth-of-type(3) .bar span{
     font-weight: bold;
 }
+
 .flex {
     align-items: center;
     display: flex;
@@ -223,7 +230,7 @@ section:nth-of-type(3) .bar.fill {
     left: 0;
     position: absolute;
     top: 0;
-    background-color: #035abe;
+    background-color: #2b89ea;
     opacity: 1;
     height: 30px;
 }
@@ -325,21 +332,34 @@ footer .footer-below {
 }
 
 .projects-tittle{
-    padding-top: 5%;
+    padding-top: 10%;
+
 }
 
 .projects-tittle h1{
-    color: white;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 60px;
+    color: #212529;
 }
 
 .projects-list{
-    margin-top: 5%;
-    margin-bottom: 5%;
+
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.projects-list h3{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
 }
 
-.project-column{
+.project-column, h3{
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.project-column .column-name{
+    font-family: 'Oleo Script', cursive;
+    font-size: 38px;
 }
 .card-header{
     width: 100%;
