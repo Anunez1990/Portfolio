@@ -51,6 +51,10 @@ section{
 
 #menu .container{
     padding-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+
 }
 
 .container .navbar .navbar-brand{
@@ -481,4 +485,11 @@ footer .footer-below {
     .container .navbar .navbar-brand {
         font-size: 0.85em;
     }
+}
+
+@media (min-width: 1200px)
+{
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+}
 }
