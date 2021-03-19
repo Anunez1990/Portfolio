@@ -246,28 +246,35 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
+<!-- J-QUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
+    // Closes the Responsive Menu on Menu Item Click
+
+
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
 
         if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-            document.getElementById("menu").style.height = "80px";
+            document.getElementById("menu").style.minHeight = "80px";
             document.getElementById("menu").style.transitionDuration = "0.1s";
-            document.getElementById("navbar-brand").style.fontSize="1.8em";
             document.getElementById("main-container").style.paddingTop="5px";
-            //document.getElementById("profile-img").style.marginTop="-10%";
 
         }
         else
         {
-            document.getElementById("menu").style.height = "100px";
+            document.getElementById("menu").style.minHeight = "100px";
             document.getElementById("menu").style.transitionDelay = "0.1s";
-            document.getElementById("navbar-brand").style.fontSize="2em";
             document.getElementById("main-container").style.paddingTop="15px";
-            // document.getElementById("profile-img").style.marginTop="10%";
         }
-
     }
+
+    function collapsemenu(){
+        document.querySelector(".navbar-collapse").classList.remove("show");
+    }
+
 </script>
+
 </body>
 </html>
