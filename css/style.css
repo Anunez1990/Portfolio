@@ -395,6 +395,9 @@ footer .footer-below {
         padding-top: 13%;
         padding-bottom: 10%;
     }
+    .resume-company-name{
+        margin-left: auto;
+    }
 }
 
 /*-------------------------------------
@@ -484,6 +487,15 @@ footer .footer-below {
     .project-column p{
         margin-top: 0px;
     }
+
+    .resume-company-name{
+        margin-left: auto;
+    }
+    .resume-header{
+        margin-top: 0;
+        padding-top: 0;
+        height: auto;
+    }
 }
 
 @media(max-width:600px) {
@@ -495,6 +507,15 @@ footer .footer-below {
         padding: 0;
     }
 
+    .resume-section{
+        padding: 0;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+    .resume-company-name{
+        margin-left: 0;
+    }
+
     #menu .container{
         padding-top: 1%;
         margin-left: auto;
@@ -504,11 +525,6 @@ footer .footer-below {
 
     ul, p {
         font-size: 12px;
-    }
-
-    header{
-        padding-top: 20%;
-        padding-bottom: 10%;
     }
 
     .menu {
@@ -538,7 +554,18 @@ footer .footer-below {
         background: 0 0;
         transition: all .3s ease-in-out;
     }
+    /*<!-- ---RESUME--- -->*/
+    .resume-wrapper{
+        padding-bottom: 0%;
+    }
 
+    .resume-wrapper {
+        padding-bottom: 0px;
+    }
+    header{
+        padding-top: 0%;
+        margin-top: 0%;
+    }
 
 }
 @media(max-width:500px) {
@@ -554,8 +581,23 @@ footer .footer-below {
         padding: 0;
         max-width: 100%;
     }
+    .resume-company-name {
+        margin-left: 0;
+    }
+    .resume-wrapper{
+        padding-bottom: 0%;
 
+    }
+    header{
+        padding-top: 20%;
+    }
 
+}
+@media (max-width: 1200px) {
+    header {
+        padding-top: 0%;
+        margin-top: 15%;
+    }
 }
 
 @media(min-width:1400px){
@@ -563,3 +605,28 @@ footer .footer-below {
         padding: 4%;
     }
 }
+@media(min-width:1200px) {
+    .resume-company-name {
+        margin-left: auto;
+    }
+    header{
+        padding-top: 0%;
+        margin-top: 0%;
+    }
+    .resume-wrapper {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+}
+/*----------------RESUME-------------------------*/
+
+.resume-wrapper{
+    margin-top: 7.5%;
+}
+
+.resume-header {
+    background: #5a6063;
+    color: rgba(255, 255, 255, 0.9);
+    height: 220px;
+}
+

@@ -9554,7 +9554,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-hide {
-  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -9698,20 +9697,12 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   background-color: #434E5E;
 }
 
-.resume-wrapper {
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
+
 
 .resume-wrapper-inner {
   max-width: 1000px;
 }
 
-.resume-header {
-  background: #434E5E;
-  color: rgba(255, 255, 255, 0.9);
-  height: 220px;
-}
 
 .resume-header .picture {
   width: 220px;
