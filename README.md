@@ -8,7 +8,7 @@ Created by:
 Links:
 
 * GITHUB:
-https://alexn2307.github.io/Portfolio/index.html
+  https://github.com/Anunez1990/Portfolio.git
 * PROJECT  MOCKUP
 https://drive.google.com/file/d/1YH3OffRWPXbB1OtgP0UwscXXQVrCxt2z/view?usp=sharing
 
