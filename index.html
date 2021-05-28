@@ -374,7 +374,7 @@
         </div>
         <div class="row ">
             <div class="col-lg-8 col-lg-offset-2 mr-auto ml-auto">
-                <form action="" method="POST" name="sentMessage" id="contactForm" novalidate="" class="mr-auto ml-auto">
+                <form action="" method="POST" name="contact" id="contactForm" novalidate="" class="mr-auto ml-auto">
                     <div class="row control-group">
                         <div class="form-group col-lg-12 col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
@@ -385,7 +385,7 @@
                     <div class="row control-group">
                         <div class="form-group col-lg-12 col-xs-12 floating-label-form-group controls">
                             <label>Email Address</label>
-                            <input type="email" name="_replyto" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -404,7 +404,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-success btn-lg">Send</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="sendEmail()">Send</button>
                         </div>
                     </div>
                 </form>
@@ -438,11 +438,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!-- J-QUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- JavaScript library for email-->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <script>
     // Closes the Responsive Menu on Menu Item Click
-
-
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
 
@@ -450,7 +450,6 @@
             document.getElementById("menu").style.minHeight = "80px";
             document.getElementById("menu").style.transitionDuration = "0.1s";
             document.getElementById("main-container").style.paddingTop="5px";
-
         }
         else
         {
@@ -464,7 +463,21 @@
         document.querySelector(".navbar-collapse").classList.remove("show");
     }
 
+    function sendEmail(){
+        var name = document.forms["contact"]["name"].value;
+        var email = document.forms["contact"]["email"].value;
+        var message = document.forms["contact"]["message"].value;
+        Email.send({
+            SecureToken : "938800cf-02c3-4c0c-9718-feb776598c92",
+            To : 'anunezr1990@gmail.com',
+            From : email,
+            Subject : name + " sent you a message",
+            Body : "Name: "+name+"<br/>"+"Email: "+email+"<br/>"+ "Message: "+ message,
+        }).then(
+            message => alert("mail sent successfully")
+        );
 
+    }
 </script>
 </body>
 </html>
