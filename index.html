@@ -474,13 +474,11 @@
             Subject : name + " sent you a message",
             Body : "Name: "+name+"<br/>"+"Email: "+email+"<br/>"+ "Message: "+ message,
         }).then(
-            message => alert("mail sent successfully")
-
+            message => alert("Mail sent successfully")
         );
         document.forms["contact"]["name"].value="";
         document.forms["contact"]["email"].value="";
         document.forms["contact"]["message"].value="";
-
     }
 </script>
 </body>
