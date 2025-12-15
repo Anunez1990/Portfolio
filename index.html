@@ -484,6 +484,8 @@
             document.getElementById("menu").style.transitionDelay = "0.1s";
             document.getElementById("main-container").style.paddingTop="15px";
         }
+        // update header offset when menu size changes on scroll
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
     }
 
     /*
@@ -499,6 +501,10 @@
         document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
             item.addEventListener('click', collapsemenu);
         });
+        // set initial header offset after DOM ready
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+        // recalc on window resize
+        window.addEventListener('resize', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
     });
 
     /*
@@ -534,6 +540,31 @@
             alert('Network error. Please try again later.');
         });
     }
+
+    /*
+        setHeaderOffset(): compute padding-top for `.profile-header` so the
+        fixed `.menu` does not visually clip the profile image. Calculation
+        uses the menu height plus a fraction of the profile image height.
+        Runs on load, DOMContentLoaded, resize and after scroll adjustments.
+    */
+    function setHeaderOffset(){
+        try{
+            var menu = document.querySelector('.menu');
+            var header = document.querySelector('.profile-header');
+            var img = document.querySelector('.profile-header .profile-img');
+            if(!menu || !header) return;
+            var menuH = menu.offsetHeight || 0;
+            var imgH = img ? img.offsetHeight : 0;
+            var extra = 12; // small breathing room in px
+            var padding = Math.round(menuH + imgH * 0.6 + extra);
+            header.style.paddingTop = padding + 'px';
+        }catch(e){/* silent fallback */}
+    }
+
+    // ensure offset recalculation when page fully loads and when image finishes loading
+    window.addEventListener('load', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
+    var _pimg = document.querySelector('.profile-header .profile-img');
+    if(_pimg){ _pimg.addEventListener('load', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); }); }
 </script>
 </body>
 </html>
