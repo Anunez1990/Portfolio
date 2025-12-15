@@ -217,17 +217,17 @@ header{
        overflowing/translated profile image is fully visible below the
        fixed `.menu`. Values are conservative and tuned per breakpoint. */
     .profile-header{
-        padding-top: 6.5rem; /* base: mobile */
+        padding-top: 9.5rem; /* base: mobile - increased to prevent clipping */
     }
 
     @media (min-width: 576px) {
-        .profile-header{ padding-top: 7.5rem; }
+        .profile-header{ padding-top: 10.5rem; }
     }
     @media (min-width: 768px) {
-        .profile-header{ padding-top: 9rem; }
+        .profile-header{ padding-top: 11.5rem; }
     }
     @media (min-width: 992px) {
-        .profile-header{ padding-top: 11rem; }
+        .profile-header{ padding-top: 13rem; }
     }
 
 
