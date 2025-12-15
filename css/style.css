@@ -23,6 +23,12 @@ body {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/* Reset default body/html spacing to avoid thin gaps under fixed menu */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 ul, p {
     font-size: 20px;
 }
@@ -664,15 +670,25 @@ section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
     /* allow header content to use a wider max-width so it doesn't
        appear stuck to one side on very wide monitors */
     .profile-header .container{
-        max-width: 1800px;
+        max-width: 100%;
         padding-left: 0; /* remove any container side padding that may create a visual gap */
         padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
     /* scale typographic elements up for large displays */
     .name{ font-size: 6.5em; }
     .major{ font-size: 3.2em; }
     /* increase header top spacing so the larger image can overlap */
     .profile-header{ padding-top: 14rem; }
+}
+
+/* Increase base font size on very large displays to keep proportions */
+@media (min-width:1600px){
+    body { font-size: 18px; }
+}
+@media (min-width:2560px){
+    body { font-size: 20px; }
 }
 
 /* Prevent any top margin that could create a gap under the fixed menu */
