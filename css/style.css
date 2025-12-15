@@ -112,6 +112,23 @@ section{
     padding-top: 1.2%;
 }
 
+/* Arrange social icon buttons horizontally on larger viewports
+   to avoid vertical stacking when there is more horizontal space. */
+@media (min-width: 992px) {
+    .menu .container .mr-auto{
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    .menu .container .mr-auto .btn-social{
+        margin-left: 0; /* gap handles spacing */
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        font-size: 16px;
+    }
+}
+
 /* Nav link sizing: override broad `ul` rules and ensure menu items
    remain legible but not oversized. Mobile-first then scale up slightly
    at larger breakpoints. */
