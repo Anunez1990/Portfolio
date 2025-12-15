@@ -99,6 +99,26 @@ section{
     padding-top: 1.2%;
 }
 
+/* Nav link sizing: override broad `ul` rules and ensure menu items
+   remain legible but not oversized. Mobile-first then scale up slightly
+   at larger breakpoints. */
+.navbar-nav .nav-link{
+    font-size: 1rem; /* base */
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    line-height: 1.1;
+}
+
+@media (min-width: 576px){
+    .navbar-nav .nav-link{ font-size: 1.05rem; }
+}
+@media (min-width: 768px){
+    .navbar-nav .nav-link{ font-size: 1.1rem; }
+}
+@media (min-width: 992px){
+    .navbar-nav .nav-link{ font-size: 1.12rem; }
+}
+
 /*----------Social Icons---------------*/
 
 /* Social icons: small circular icon buttons used for social links.
