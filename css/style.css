@@ -74,6 +74,13 @@ section{
     width: 100%;
 }
 
+/* Ensure menu overlays header cleanly with no visible border or shadow */
+.menu{
+    z-index: 1030;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
 #menu .container{
     padding-top: 1%;
     margin-left: auto;
@@ -658,12 +665,19 @@ section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
        appear stuck to one side on very wide monitors */
     .profile-header .container{
         max-width: 1800px;
+        padding-left: 0; /* remove any container side padding that may create a visual gap */
+        padding-right: 0;
     }
     /* scale typographic elements up for large displays */
     .name{ font-size: 6.5em; }
     .major{ font-size: 3.2em; }
     /* increase header top spacing so the larger image can overlap */
     .profile-header{ padding-top: 14rem; }
+}
+
+/* Prevent any top margin that could create a gap under the fixed menu */
+header, .profile-header{
+    margin-top: 0;
 }
 
 
