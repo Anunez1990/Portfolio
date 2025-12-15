@@ -156,10 +156,14 @@ header{
 }
 
 .profile-img{
+    display: block;
     margin-top: 2%;
     margin-bottom: 2%;
+    /* fluid width with sensible min/max so image never gets clipped */
+    width: clamp(90px, 25vw, 160px);
+    height: auto;
     border-radius: 50%;
-    border: solid 7px white;
+    border: solid 6px white;
 }
 
 .intro-text hr{
@@ -462,7 +466,6 @@ body { font-size: 14px; }
 .navbar-toggler { margin-top: 6px; }
 .btn-social { width: 26px; height: 26px; font-size: 14px; line-height: 22px; }
 header { padding-top: 18%; background-position: center top; }
-.profile-img { width: 110px; height: 110px; border-width: 5px; }
 .intro-text .name { font-size: 1.8em; }
 .intro-text .major { font-size: 1.05em; }
 section { padding: 6% 4%; }
@@ -482,7 +485,7 @@ section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
     .menu { min-height: 70px; }
     .container .navbar .navbar-brand { font-size: 1.4em; }
     header { padding-top: 12%; }
-    .profile-img { width: 140px; height: 140px; border-width: 6px; }
+    .profile-img { border-width: 6px; }
     .intro-text .name { font-size: 2.4em; }
     .intro-text .major { font-size: 1.2em; }
     .projects-title { padding-top: 18%; }
@@ -610,10 +613,7 @@ section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
         margin-top: 22%;
         margin-bottom: 2%;
         border-radius: 50%;
-        width: 110px;
-        height: 110px;
         border: 5px solid ghostwhite;
-
     }
     .resume-header{
         margin-top: 0;
