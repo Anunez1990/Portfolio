@@ -448,24 +448,39 @@ footer .footer-below {
                 SMALL VIEWS
 --------------------------------------*/
 
-/* Responsive breakpoints: keep mobile-first rules here. Limit the
-    number of breakpoints and prefer fluid layout techniques where
-    practical to reduce maintenance complexity. */
-@media (max-width: 1200px) {
-    /* Tablet / small-desktop adjustments */
-    .menu { min-height: 80px; }
-    .container .navbar .navbar-brand { font-size: 1.6em; }
-    .projects-title { padding-top: 14%; }
-    .projects-title h1 { font-size: 48px; }
-    .card-header { height: 200px; }
-}
+/* Responsive (mobile-first using Bootstrap breakpoints)
+   - Base styles apply to mobile (xs).
+   - Use `min-width` queries to layer styles for larger viewports.
+   Breakpoints (Bootstrap 4.5):
+     sm: 576px, md: 768px, lg: 992px, xl: 1200px
+*/
 
-@media (max-width: 900px) {
-    /* Landscape phones and small tablets */
+/* Mobile base (xs) — small viewport defaults */
+body { font-size: 14px; }
+.menu { min-height: 60px; }
+.container .navbar .navbar-brand { font-size: 1.1em; }
+.navbar-toggler { margin-top: 6px; }
+.btn-social { width: 26px; height: 26px; font-size: 14px; line-height: 22px; }
+header { padding-top: 18%; background-position: center top; }
+.profile-img { width: 110px; height: 110px; border-width: 5px; }
+.intro-text .name { font-size: 1.8em; }
+.intro-text .major { font-size: 1.05em; }
+section { padding: 6% 4%; }
+.project-column, h3 { margin-left: 4%; margin-right: 4%; }
+.card-header { height: 140px; background-position: center; }
+.projects-title { padding-top: 28%; }
+.projects-title h1 { font-size: 34px; }
+.flex { display: flex; flex-direction: column; }
+.scroll-top { right: 4%; bottom: 4%; }
+.row .skill-topic { padding-left: 0; padding-right: 0; }
+section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
+.btn-success { margin-left: 0; width: 100%; }
+
+/* Small devices (landscape phones, sm and up) */
+@media (min-width: 576px) {
     body { font-size: 15px; }
     .menu { min-height: 70px; }
     .container .navbar .navbar-brand { font-size: 1.4em; }
-    .btn-social { width: 28px; height: 28px; font-size: 16px; line-height: 24px; }
     header { padding-top: 12%; }
     .profile-img { width: 140px; height: 140px; border-width: 6px; }
     .intro-text .name { font-size: 2.4em; }
@@ -475,49 +490,30 @@ footer .footer-below {
     .card-header { height: 180px; }
     .project-column, h3 { margin-left: 6%; margin-right: 6%; }
     .row .skill-topic { padding-left: 5%; padding-right: 5%; }
-    section:nth-of-type(3) .bar { height: 26px; font-size: 13pt; }
 }
 
-@media (max-width: 576px) {
-    /* Mobile (portrait) rules — stack and scale down elements */
-    body { font-size: 14px; }
-    .menu { min-height: 60px; }
-    .container .navbar .navbar-brand { font-size: 1.1em; }
-    .navbar-toggler { margin-top: 6px; }
-    .btn-social { width: 26px; height: 26px; font-size: 14px; line-height: 22px; }
-    header { padding-top: 18%; background-position: center top; }
-    .profile-img { width: 110px; height: 110px; border-width: 5px; }
-    .intro-text .name { font-size: 1.8em; }
-    .intro-text .major { font-size: 1.05em; }
-    section { padding: 6% 4%; }
-    .project-column, h3 { margin-left: 4%; margin-right: 4%; }
-    .card-header { height: 140px; background-position: center; }
-    .projects-title { padding-top: 28%; }
-    .projects-title h1 { font-size: 34px; }
-    .flex { display: flex; flex-direction: column; }
-    .scroll-top { right: 4%; bottom: 4%; }
-    .row .skill-topic { padding-left: 0; padding-right: 0; }
-    section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
-    .btn-success { margin-left: 0; width: 100%; }
+/* Medium devices (tablets, md and up) */
+@media (min-width: 768px) {
+    .menu { min-height: 80px; }
+    .container .navbar .navbar-brand { font-size: 1.6em; }
+    .projects-title { padding-top: 14%; }
+    .projects-title h1 { font-size: 48px; }
+    .card-header { height: 200px; }
 }
 
-/* End responsive rules */
+/* Large devices (desktops, lg and up) */
+@media (min-width: 992px) {
+    /* Slightly larger brand for desktop */
+    .container .navbar .navbar-brand { font-size: 1.8em; }
+    ul, p { font-size: 20px; }
+    section{ padding-top: 7.5%; padding-bottom: 7.5%; }
+}
 
-@media(max-width:900px) {
-
-    /*NAVIGATION BAR*/
-    .container .navbar .navbar-brand{
-        font-size: 1.5em;
-    }
-
-    ul, p {
-        font-size: 16px;
-    }
-
-    section{
-        padding-top: 12%;
-        padding-bottom: 5%;
-    }
+/* Extra large (xl and up) */
+@media (min-width: 1200px) {
+    .projects-title h1 { font-size: 60px; }
+    .card-header { height: 250px; }
+}
     header{
         padding-top: 10%;
         padding-bottom: 10%;
