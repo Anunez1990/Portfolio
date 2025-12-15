@@ -53,26 +53,26 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link" href="../#about">PROFILE <span class="sr-only">(current)</span></a>
 					</li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link " href="../#interests">EXPERIENCE</a>
 					</li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link " href="../#skills">SKILLS</a>
 					</li>
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link " href="../#contact">CONTACT</a>
 					</li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link " >RESUME</a>
 					</li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
+					<li class="nav-item active">
 						<a class="nav-link " href="../projects/projects.html">PROJECTS</a>
 					</li>
 				</ul>
@@ -508,12 +508,9 @@
 			<i class="fa fa-chevron-up"></i>
 		</a>
 	</div>
-	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-	<!-- J-QUERY-->
+	<!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 	<script>
 		// Closes the Responsive Menu on Menu Item Click
@@ -539,6 +536,13 @@
 	function collapsemenu(){
 		document.querySelector(".navbar-collapse").classList.remove("show");
 	}
+
+	// Attach listeners instead of inline onclick attributes
+	document.addEventListener('DOMContentLoaded', function(){
+		document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
+			item.addEventListener('click', collapsemenu);
+		});
+	});
 
 </script>
 </body>
