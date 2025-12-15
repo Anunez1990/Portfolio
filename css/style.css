@@ -172,6 +172,47 @@ header{
 
 }
 
+/* Profile image: maintain fluid sizing but restore intended overlap
+   across breakpoints. Use a relatively positioned container and apply
+   a vertical translate to create the overlap effect. Values are
+   mobile-first and increase at larger breakpoints to match design. */
+.profile-header .img-container{
+    position: relative;
+    display: inline-block;
+    margin-top: 0; /* container margin handled by header/padding */
+}
+
+.profile-header .profile-img{
+    /* Keep same fluid sizing but scope properties to header context
+       so later re-declarations won't break layout. */
+    width: clamp(90px, 25vw, 160px);
+    height: auto;
+    border-radius: 50%;
+    border: solid 6px white;
+    display: block;
+    margin: 0 auto;
+    transition: transform 220ms ease, margin 220ms ease;
+    transform: translateY(-8%); /* small overlap on narrow screens */
+}
+
+/* Increase overlap at larger breakpoints to mimic original layout */
+@media (min-width: 576px) {
+    .profile-header .profile-img{
+        transform: translateY(-14%);
+    }
+}
+@media (min-width: 768px) {
+    .profile-header .profile-img{
+        transform: translateY(-18%);
+    }
+}
+@media (min-width: 992px) {
+    .profile-header .profile-img{
+        transform: translateY(-26%);
+    }
+}
+
+
 
 
 /*---------------------------
