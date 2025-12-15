@@ -539,6 +539,36 @@ section { padding: 6% 4%; }
 section:nth-of-type(3) .bar { height: 26px; font-size: 12pt; }
 .btn-success { margin-left: 0; width: 100%; }
 
+/* Toggler (hamburger) sizing: keep the control visually balanced across
+   breakpoints. We reduce padding and the svg icon background-size so the
+   button doesn't appear oversized on small and large viewports. */
+.navbar-toggler{
+    padding: 0.25rem 0.5rem;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-toggler-icon{
+    background-size: 20px 20px; /* smaller icon */
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 576px){
+    .navbar-toggler{ width: 52px; height: 52px; padding: 0.3rem 0.6rem; }
+    .navbar-toggler-icon{ background-size: 22px 22px; width: 22px; height: 22px; }
+}
+@media (min-width: 768px){
+    .navbar-toggler{ width: 56px; height: 56px; padding: 0.35rem 0.65rem; }
+    .navbar-toggler-icon{ background-size: 24px 24px; width: 24px; height: 24px; }
+}
+@media (min-width: 992px){
+    .navbar-toggler{ width: 60px; height: 60px; padding: 0.4rem 0.75rem; }
+    .navbar-toggler-icon{ background-size: 26px 26px; width: 26px; height: 26px; }
+}
+
 /* Small devices (landscape phones, sm and up) */
 @media (min-width: 576px) {
     body { font-size: 15px; }
