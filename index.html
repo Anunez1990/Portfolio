@@ -443,8 +443,7 @@
 <!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<!-- JavaScript library for email-->
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!-- Email sending handled via Formspree fetch (no smtp.js) -->
 
 <script>
     // Closes the Responsive Menu on Menu Item Click
@@ -475,21 +474,32 @@
     });
 
     function sendEmail(){
-        var name = document.forms["contact"]["name"].value;
-        var email = document.forms["contact"]["email"].value;
-        var message = document.forms["contact"]["message"].value;
-        Email.send({
-            SecureToken : "938800cf-02c3-4c0c-9718-feb776598c92",
-            To : 'anunezr1990@gmail.com',
-            From : email,
-            Subject : name + " sent you a message",
-            Body : "Name: "+name+"<br/>"+"Email: "+email+"<br/>"+ "Message: "+ message,
-        }).then(
-            message => alert("Mail sent successfully")
-        );
-        document.forms["contact"]["name"].value="";
-        document.forms["contact"]["email"].value="";
-        document.forms["contact"]["message"].value="";
+        var form = document.forms["contact"];
+        // Replace <YOUR_FORM_ID> with your Formspree form ID (example: https://formspree.io/f/abcdxyz)
+        var endpoint = "https://formspree.io/f/<YOUR_FORM_ID>";
+
+        var formData = new FormData(form);
+
+        fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(function(response){
+            if (response.ok) {
+                alert('Mail sent successfully');
+                form.reset();
+            } else {
+                response.json().then(function(data){
+                    alert((data && data.error) ? data.error : 'There was a problem sending the message.');
+                }).catch(function(){
+                    alert('There was a problem sending the message.');
+                });
+            }
+        }).catch(function(){
+            alert('Network error. Please try again later.');
+        });
     }
 </script>
 </body>
