@@ -212,6 +212,25 @@ header{
     }
 }
 
+    /* Ensure fixed top menu does not visually clip the profile area.
+       Add top padding to the profile header (mobile-first) so the
+       overflowing/translated profile image is fully visible below the
+       fixed `.menu`. Values are conservative and tuned per breakpoint. */
+    .profile-header{
+        padding-top: 6.5rem; /* base: mobile */
+    }
+
+    @media (min-width: 576px) {
+        .profile-header{ padding-top: 7.5rem; }
+    }
+    @media (min-width: 768px) {
+        .profile-header{ padding-top: 9rem; }
+    }
+    @media (min-width: 992px) {
+        .profile-header{ padding-top: 11rem; }
+    }
+
+
 
 
 
