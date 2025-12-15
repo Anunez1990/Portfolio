@@ -1,3 +1,23 @@
+/*
+        style.css — Project stylesheet
+
+        Purpose:
+        - Centralized styles for the portfolio website (typography, layout,
+            components and responsive rules).
+        - Keep this file focused on project-specific rules; avoid editing
+            third-party library CSS to simplify upgrades.
+
+        Conventions:
+        - Section separators mark high-level areas (Header, Introduction,
+            Sections, Footer, etc.).
+        - Use descriptive class names and keep selectors specific but not
+            overly qualified to maintain performance and maintainability.
+*/
+
+/* -----------------------------
+     Base / Typography
+     ----------------------------- */
+
 body {
     overflow-x: hidden;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -34,8 +54,12 @@ section{
 
 
 /*---------------------------
-            Header
+                        Header
 ----------------------------*/
+
+/* Header styles: navigation bar, gradient background and layout
+     - Keep nav styles lightweight to ensure good performance on mobile
+         and desktop. */
 
 .navbar{
     font-family: Montserrat,sans-serif;
@@ -77,6 +101,10 @@ section{
 
 /*----------Social Icons---------------*/
 
+/* Social icons: small circular icon buttons used for social links.
+    Designed to be visually prominent and accessible (sufficient size
+    and contrast). */
+
 
 .btn-social {
     display: inline-block;
@@ -115,8 +143,12 @@ section{
 }
 
 /*---------------------------
-            Introduction
+                Introduction
 ----------------------------*/
+
+/* Intro / Hero: background image, heading styles and profile image.
+    Use `background-size: cover` to ensure the hero image fills the area
+    while maintaining aspect ratio across viewport sizes. */
 header{
     background: url(../pictures/project_1.jpg) no-repeat top center/cover;
     padding-top: 8%;
@@ -139,8 +171,12 @@ header{
 
 
 /*---------------------------
-         About Section
+            About Section
 ----------------------------*/
+
+/* About: typographic treatments for headings and personal summary.
+    Oleo Script is used for a more personal/handwritten look on names
+    while Montserrat remains the primary UI type for clarity. */
 #about .col-lg-12 hr{
     max-width: 260px;
     border-top: solid 4px #29455b;
@@ -184,8 +220,12 @@ header{
     font-size: medium;
 }
 /*---------------------------
-         Skills Section
+            Skills Section
 ----------------------------*/
+
+/* Skills: visual skill bars use a background track with an absolutely
+    positioned fill to represent proficiency. Keep heights and font
+    sizes consistent for predictable layout. */
 
 .row .skill-topic {
     padding-left: 17.5%;
@@ -257,8 +297,12 @@ section:nth-of-type(3) .bar span {
 }
 
 /*---------------------------
-         Contact Section
+            Contact Section
 ----------------------------*/
+
+/* Contact: form area with clear affordance for submit action. Buttons
+    use Bootstrap's success palette; override only necessary properties
+    here to keep behavior predictable. */
 #contact {
     background-color: #a3a7ab57;
 }
@@ -271,8 +315,11 @@ section:nth-of-type(3) .bar span {
     margin-left: 20%;
 }
 /*---------------------------
-         Footer Section
+            Footer Section
 ----------------------------*/
+
+/* Footer: uses dark backgrounds and light text for strong contrast.
+    Keep footer styles separated to simplify theme overrides. */
 footer {
     color: #fff;
 }
@@ -325,8 +372,12 @@ footer .footer-below {
     outline: 0;
 }
 /*-------------------------------------
-            PROJECTS
+                PROJECTS
 --------------------------------------*/
+
+/* Projects section: card-based layout with image headers. Images are
+    set as background images on card headers so they scale and crop
+    consistently across different screen sizes. */
 
 .projects{
     width: 100%;
@@ -394,8 +445,12 @@ footer .footer-below {
 }
 
 /*-------------------------------------
-            SMALL VIEWS
+                SMALL VIEWS
 --------------------------------------*/
+
+/* Responsive breakpoints: keep mobile-first rules here. Limit the
+    number of breakpoints and prefer fluid layout techniques where
+    practical to reduce maintenance complexity. */
 @media(max-width:900px) {
 
     /*NAVIGATION BAR*/
