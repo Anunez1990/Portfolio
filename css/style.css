@@ -180,7 +180,7 @@ header{
     margin-top: 2%;
     margin-bottom: 2%;
     /* fluid width with sensible min/max so image never gets clipped */
-    width: clamp(90px, 25vw, 160px);
+    width: clamp(90px, 20vw, 220px);
     height: auto;
     border-radius: 50%;
     border: solid 6px white;
@@ -205,7 +205,7 @@ header{
 .profile-header .profile-img{
     /* Keep same fluid sizing but scope properties to header context
        so later re-declarations won't break layout. */
-    width: clamp(90px, 25vw, 160px);
+    width: clamp(90px, 20vw, 220px);
     height: auto;
     border-radius: 50%;
     border: solid 6px white;
@@ -230,6 +230,23 @@ header{
     .profile-header .profile-img{
         transform: translateY(-26%);
     }
+}
+
+/* Larger name and subtitle on wider viewports to match reference */
+.name{
+    font-size: 3.2em; /* base already set; keep as baseline */
+}
+@media (min-width: 768px){
+    .name{ font-size: 3.8em; }
+    .major{ font-size: 2.4em; }
+}
+@media (min-width: 992px){
+    .name{ font-size: 4.6em; }
+    .major{ font-size: 2.6em; }
+}
+@media (min-width: 1200px){
+    .name{ font-size: 5.2em; }
+    .major{ font-size: 2.8em; }
 }
 
     /* Ensure fixed top menu does not visually clip the profile area.
