@@ -16,8 +16,14 @@
 	<!--<CUSTOM STYLESHEET>-->
 	<link rel="stylesheet" href="../css/style.css">
 
-	<!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<!--
+		Main stylesheet: `../css/style.css` centraliza estilos compartidos
+		(estructura, tipografías y colores). Mantén aquí las reglas del tema
+		para facilitar la consistencia entre páginas.
+	-->
+
+	<!-- Google Fonts: Roboto family used for body text (performance: load only necessary weights) -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
@@ -508,13 +514,18 @@
 			<i class="fa fa-chevron-up"></i>
 		</a>
 	</div>
-	<!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
+	<!-- Scripts: carga jQuery (una sola vez) y Bootstrap bundle -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 	<script>
-		// Closes the Responsive Menu on Menu Item Click
-
+	/*
+		UI behaviour:
+		- scrollFunction: adjusts the menu height and padding based on scroll.
+		- collapsemenu: closes the responsive menu when a nav item is selected.
+		Handlers are lightweight and use native selectors for better
+		performance and compatibility on static hosting.
+	*/
 
 	window.onscroll = function() {scrollFunction()};
 	function scrollFunction() {
@@ -533,6 +544,10 @@
 		}
 	}
 
+	/*
+		collapsemenu(): removes the `show` class from `.navbar-collapse`
+		to collapse the menu on mobile devices.
+	*/
 	function collapsemenu(){
 		document.querySelector(".navbar-collapse").classList.remove("show");
 	}

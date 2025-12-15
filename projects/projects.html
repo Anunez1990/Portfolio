@@ -16,7 +16,13 @@
     <!--<CUSTOM STYLESHEET>-->
     <link rel="stylesheet" href="../css/style.css">
 
-    <!--Google Fonts-->
+    <!--
+        Main stylesheet: `../css/style.css` centraliza estilos compartidos
+        (layout, utilidades y ajustes de tema). Mantén las reglas de diseño
+        aquí para asegurar consistencia entre páginas.
+    -->
+
+    <!-- Google Fonts (combinadas para reducir requests y mejorar rendimiento) -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200;300;700;800&family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 
@@ -271,8 +277,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 <script>
-    // Closes the Responsive Menu on Menu Item Click
-
+    /*
+        UI behaviour:
+        - scrollFunction: adjusts the menu presentation based on scrolling.
+        - collapsemenu: closes the responsive menu when a nav item is selected.
+        Handlers are lightweight and use native DOM APIs for broad
+        compatibility on static hosts.
+    */
 
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
@@ -291,6 +302,10 @@
         }
     }
 
+    /*
+        collapsemenu(): removes the `show` class from `.navbar-collapse`
+        to close the mobile menu.
+    */
     function collapsemenu(){
         document.querySelector(".navbar-collapse").classList.remove("show");
     }

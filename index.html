@@ -17,7 +17,17 @@
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--Google Fonts-->
+    <!--
+        Main stylesheet: `css/style.css` includes custom layout, color palette
+        and responsive rules. Keep project-specific CSS here to simplify
+        maintenance and to avoid modifying third-party library files.
+    -->
+
+    <!--
+        Google Fonts (combined request):
+        Loading multiple font families in a single request reduces HTTP
+        overhead and improves performance on initial load.
+    -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200;300;700;800&family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 
@@ -443,10 +453,23 @@
 <!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<!-- Email sending handled via Formspree fetch (no smtp.js) -->
+<!--
+    Script responsibilities:
+    - Visual adjustments of the main menu during scroll.
+    - Close the responsive menu when a navigation item is selected.
+    - Submit the contact form to Formspree using a fetch POST request.
+
+    Note: To enable form submissions from GitHub Pages, sign up for
+    Formspree and replace `<YOUR_FORM_ID>` in the `endpoint` variable
+    inside `sendEmail()` with your Formspree form ID.
+-->
 
 <script>
-    // Closes the Responsive Menu on Menu Item Click
+    /*
+        Handles menu style changes when the user scrolls. Keep this
+        logic lightweight by using native selectors and minimal DOM
+        operations to reduce repaint cost.
+    */
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
 
@@ -463,6 +486,11 @@
         }
     }
 
+    /*
+        collapsemenu(): removes the `show` class from the navigation
+        container to collapse the mobile menu when a navigation item
+        is clicked.
+    */
     function collapsemenu(){
         document.querySelector(".navbar-collapse").classList.remove("show");
     }
@@ -473,6 +501,11 @@
         });
     });
 
+    /*
+        sendEmail(): gathers data from the `contact` form and posts it to
+        Formspree using fetch. The response is handled by showing a brief
+        message to the user and resetting the form on success.
+    */
     function sendEmail(){
         var form = document.forms["contact"];
         // Replace <YOUR_FORM_ID> with your Formspree form ID (example: https://formspree.io/f/abcdxyz)
