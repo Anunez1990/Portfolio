@@ -374,3 +374,12 @@ section:nth-of-type(3) .bar { height:26px; font-size:12pt; }
 @media (min-width:2560px){ body{ font-size:20px; } }
 
 
+
+/* Force contact form Send button left-aligned (override previous centering rules) */
+#contactForm .btn-success {
+    display: inline-block !important;
+    margin: 0 !important; /* left align */
+    float: none !important;
+}
+
+
