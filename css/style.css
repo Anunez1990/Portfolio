@@ -231,6 +231,14 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
 #contact .col-lg-12 hr { border:0; max-width:260px; border-top:4px solid #29455b; }
 .btn-success { margin-left:20%; }
 
+/* Ensure contact form submit button has a consistent, centered width
+   across all breakpoints (30% of its container). */
+#contactForm .btn-success {
+    width: 30%;
+    display: block;
+    margin: auto 0;
+}
+
 
 /* -----------------------------
    Footer
