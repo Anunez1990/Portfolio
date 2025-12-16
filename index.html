@@ -391,6 +391,13 @@
         </div>
         <div class="row ">
                 <div class="col-lg-8 mx-auto">
+                <!--
+                    Contact form notes:
+                    - The client-side `sendEmail()` uses Fetch to POST the form data to Formspree.
+                    - Replace the placeholder `<YOUR_FORM_ID>` in `sendEmail()` with your Formspree form ID to enable submissions.
+                    - We removed any client-side SMTP approach to avoid exposing credentials in the browser.
+                    - The form element keeps `id="contactForm"` and is reset after successful send.
+                -->
                 <form action="" method="POST" name="contact" id="contactForm" novalidate="" class="mr-auto ml-auto">
                     <div class="row control-group">
                         <div class="form-group col-12 floating-label-form-group controls">
@@ -515,7 +522,7 @@
     function sendEmail(){
         var form = document.forms["contact"];
         // Replace <YOUR_FORM_ID> with your Formspree form ID (example: https://formspree.io/f/abcdxyz)
-        var endpoint = "https://formspree.io/f/<YOUR_FORM_ID>";
+        var endpoint = "https://formspree.io/f/xnneylpo";
 
         var formData = new FormData(form);
 
