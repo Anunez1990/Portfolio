@@ -46,6 +46,12 @@ section { padding: 7.5%; }
     transition: all 0.5s ease-out;
 }
 
+.intro-text hr{
+    max-width: 350px;
+    border-top: solid 4px #212529;
+
+}
+
 #menu .container { padding-top: 1%; margin-left: auto; margin-right: auto; max-width: 95%; height: 100%; padding-top: 1.2%; }
 .container .navbar .navbar-brand { font-size: 2em; }
 
@@ -116,6 +122,55 @@ header { background: url(../pictures/project_1.jpg) no-repeat top center/cover; 
 section:nth-of-type(3) .bar { align-items:flex-end; background:#b3b5b5; color:#050505; font-size:15pt; height:30px; position:relative; margin-bottom:15px; }
 section:nth-of-type(3) .bar .fill { position:absolute; left:0; top:0; height:30px; background:#2b89ea; }
 section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:#343a40; color:#fff; height:30px; width:110px; }
+
+/* Scoped skills bar layout (override generic .flex and ensure correct positioning)
+   - Target only the skills section to avoid affecting other components. */
+#skills .bar {
+    display: block !important;
+    position: relative;
+    background: #c9cacc;
+    height: 44px;
+    margin-bottom: 16px;
+    border-radius: 3px;
+    overflow: visible;
+}
+#skills .bar .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #2b89ea;
+    width: 0; /* width is set inline in HTML (style="width:90%") */
+    border-radius: 3px 0 0 3px;
+}
+#skills .bar .tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    background: #2b2f33; /* slightly lighter than before for contrast */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 3px 0 0 3px;
+}
+#skills .bar > span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background: #bfbfbf;
+    font-weight: 700;
+    border-radius: 0 3px 3px 0;
+}
+
+/* make sure inner .fill's child .tag text doesn't get clipped on narrow widths */
+#skills .bar .fill .tag { position: relative; left: 0; background: transparent; color: inherit; padding-left: 0; }
 
 /* Projects */
 .projects { width:100%; height:450px; background:url(../pictures/project_1.jpg) no-repeat top center/cover; position:relative; }
