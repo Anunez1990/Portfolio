@@ -85,7 +85,7 @@ section { padding: 7.5%; }
 header { background: url(../pictures/project_1.jpg) no-repeat top center/cover; padding-top:8%; padding-bottom:3%; background-size:cover; }
 .profile-header .container { text-align:center; }
 .img-container { position:relative; display:inline-block; }
-.profile-img { display:block; margin:0 auto 2%; width:clamp(180px,20vw,720px); height:auto; border-radius:50%; border:8px solid #fff; transition:transform .22s ease, margin .22s ease; transform:translateY(-12%); }
+.profile-img { display:block; margin:0 auto 2%; width:clamp(180px,20vw,720px); height:auto; border-radius:50%; border:4px solid #fff; transition:transform .22s ease, margin .22s ease; transform:translateY(-12%); }
 @media(min-width:576px){ .profile-img{ transform:translateY(-18%);} }
 @media(min-width:768px){ .profile-img{ transform:translateY(-22%);} }
 @media(min-width:992px){ .profile-img{ transform:translateY(-30%);} }
@@ -129,12 +129,12 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
     display: block !important;
     position: relative;
     background: #c9cacc;
-    height: 36px; /* reduced from 44px */
+    height: 36px;
     margin-bottom: 12px;
     border-radius: 4px;
     overflow: visible;
-    width: 70%;
-    max-width: 900px;
+    width: 92%;             /* mobile-first: use most of the container */
+    max-width: 820px;      /* limit on very large screens */
     margin-left: auto;
     margin-right: auto;
 }
@@ -186,10 +186,32 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
 #skills .flex { align-items: stretch; }
 
 /* Responsive adjustments: smaller tags and fonts on narrow screens */
-@media (max-width: 600px) {
-    #skills .bar { height: 44px; /* keep slightly taller on very small screens for touch */ }
-    #skills .bar .tag { min-width: 90px; padding: 0 10px; font-size: 14px; }
+@media (max-width: 480px) {
+    /* very small phones */
+    #skills .bar { width: 94%; height: 34px; margin-bottom: 10px; }
+    #skills .bar .tag { min-width: 80px; padding: 0 8px; font-size: 13px; }
+    #skills .bar > span { font-size: 13px; padding: 0 8px; }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    /* small devices */
+    #skills .bar { width: 90%; height: 36px; }
+    #skills .bar .tag { min-width: 100px; padding: 0 10px; font-size: 14px; }
     #skills .bar > span { font-size: 14px; padding: 0 8px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* tablets / small desktops */
+    #skills .bar { width: 80%; height: 40px; }
+    #skills .bar .tag { min-width: 120px; padding: 0 12px; font-size: 15px; }
+    #skills .bar > span { font-size: 15px; padding: 0 10px; }
+}
+
+@media (min-width: 992px) {
+    /* desktop and up */
+    #skills .bar { width: 70%; height: 44px; }
+    #skills .bar .tag { min-width: 150px; padding: 0 14px; font-size: 16px; }
+    #skills .bar > span { font-size: 16px; padding: 0 12px; }
 }
 
 /* Projects */
@@ -252,7 +274,7 @@ section:nth-of-type(3) .bar { height:26px; font-size:12pt; }
 
 @media (max-width:600px){
     .container{ padding:0; }
-    .profile-img{ margin-top:22%; border:5px solid ghostwhite; }
+    .profile-img{ margin-top:22%; border:3px solid ghostwhite; }
     #menu .container{ padding-top:1%; max-width:100%; }
     ul, p { font-size:12px; }
     .menu { padding-top:1.5%; min-height:80px; }
