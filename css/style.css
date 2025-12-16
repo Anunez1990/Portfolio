@@ -85,10 +85,10 @@ section { padding: 7.5%; }
 header { background: url(../pictures/project_1.jpg) no-repeat top center/cover; padding-top:8%; padding-bottom:3%; background-size:cover; }
 .profile-header .container { text-align:center; }
 .img-container { position:relative; display:inline-block; }
-.profile-img { display:block; margin:0 auto 2%; width:clamp(140px,16vw,480px); height:auto; border-radius:50%; border:6px solid #fff; transition:transform .22s ease, margin .22s ease; transform:translateY(-8%); }
-@media(min-width:576px){ .profile-img{ transform:translateY(-14%);} }
-@media(min-width:768px){ .profile-img{ transform:translateY(-18%);} }
-@media(min-width:992px){ .profile-img{ transform:translateY(-26%);} }
+.profile-img { display:block; margin:0 auto 2%; width:clamp(180px,20vw,720px); height:auto; border-radius:50%; border:8px solid #fff; transition:transform .22s ease, margin .22s ease; transform:translateY(-12%); }
+@media(min-width:576px){ .profile-img{ transform:translateY(-18%);} }
+@media(min-width:768px){ .profile-img{ transform:translateY(-22%);} }
+@media(min-width:992px){ .profile-img{ transform:translateY(-30%);} }
 
 .intro-text h2.name { font-family:'Oleo Script Swash Caps', cursive; font-size:3.2em; }
 .intro-text .major { font-family:'Oleo Script', cursive; font-size:2.2em; }
@@ -96,10 +96,10 @@ header { background: url(../pictures/project_1.jpg) no-repeat top center/cover; 
 @media(min-width:992px){ .intro-text .name{ font-size:5.0em; } .intro-text .major{ font-size:2.8em; } }
 
 /* Ensure header spacing to avoid clipping by fixed menu; JS will dynamically adjust when available */
-.profile-header{ padding-top:9.5rem; }
-@media(min-width:576px){ .profile-header{ padding-top:10.5rem; } }
-@media(min-width:768px){ .profile-header{ padding-top:11.5rem; } }
-@media(min-width:992px){ .profile-header{ padding-top:13rem; } }
+.profile-header{ padding-top:11.5rem; }
+@media(min-width:576px){ .profile-header{ padding-top:12.5rem; } }
+@media(min-width:768px){ .profile-header{ padding-top:13.5rem; } }
+@media(min-width:992px){ .profile-header{ padding-top:15rem; } }
 
 
 /* -----------------------------
@@ -129,10 +129,14 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
     display: block !important;
     position: relative;
     background: #c9cacc;
-    height: 44px;
-    margin-bottom: 16px;
-    border-radius: 3px;
+    height: 36px; /* reduced from 44px */
+    margin-bottom: 12px;
+    border-radius: 4px;
     overflow: visible;
+    width: 70%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #skills .bar .fill {
     position: absolute;
@@ -150,11 +154,14 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 18px;
-    background: #2b2f33; /* slightly lighter than before for contrast */
+    padding: 0 14px; /* slightly smaller */
+    background: #2b2f33;
     color: #fff;
     font-weight: 600;
-    border-radius: 3px 0 0 3px;
+    border-radius: 4px 0 0 4px;
+    z-index: 3;
+    min-width: 150px; /* reduced */
+    font-size: 16px;
 }
 #skills .bar > span {
     position: absolute;
@@ -163,14 +170,27 @@ section:nth-of-type(3) .bar .tag { position:absolute; left:0; top:0; background:
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    padding: 0 10px; /* slightly smaller */
     background: #bfbfbf;
     font-weight: 700;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 4px 4px 0;
+    z-index: 3;
+    font-size: 16px;
 }
 
 /* make sure inner .fill's child .tag text doesn't get clipped on narrow widths */
-#skills .bar .fill .tag { position: relative; left: 0; background: transparent; color: inherit; padding-left: 0; }
+/* ensure fill sits behind the tag */
+#skills .bar .fill { z-index: 1; }
+
+/* stack wrapper columns to full width inside the skills area */
+#skills .flex { align-items: stretch; }
+
+/* Responsive adjustments: smaller tags and fonts on narrow screens */
+@media (max-width: 600px) {
+    #skills .bar { height: 44px; /* keep slightly taller on very small screens for touch */ }
+    #skills .bar .tag { min-width: 90px; padding: 0 10px; font-size: 14px; }
+    #skills .bar > span { font-size: 14px; padding: 0 8px; }
+}
 
 /* Projects */
 .projects { width:100%; height:450px; background:url(../pictures/project_1.jpg) no-repeat top center/cover; position:relative; }
@@ -220,7 +240,7 @@ footer .footer-below { padding:25px 0; background:#000; }
 .btn-social { width:26px; height:26px; font-size:14px; line-height:22px; }
 header { padding-top:18%; background-position:center top; }
 .intro-text .name { font-size:1.8em; }
-.intro-text .major { font-size:1.05em; }
+.intro-text .major { font-size:1.5em; }
 section { padding:6% 4%; }
 .project-column, h3 { margin-left:4%; margin-right:4%; }
 .card-header { height:140px; }
@@ -247,7 +267,7 @@ section:nth-of-type(3) .bar { height:26px; font-size:12pt; }
     header{ padding-top:12%; }
     .profile-img{ border-width:6px; }
     .intro-text .name{ font-size:2.4em; }
-    .intro-text .major{ font-size:1.2em; }
+    .intro-text .major{ font-size:1.5em; }
     .projects-title{ padding-top:18%; }
     .projects-title h1{ font-size:42px; }
     .card-header{ height:180px; }
