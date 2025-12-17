@@ -45,7 +45,7 @@ body{
 }
 
 /*--------Resume container ------*/
-.container{
+.resume-container{
   background-color: #fff;
 }
 
@@ -264,15 +264,15 @@ p{
     border-radius: 10rem;
 }
 
-/* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
-.container {
+/* Ensure readable text on resume container when Bootstrap color-mode sets dark theme */
+.resume-container {
   color: #212529;
 }
 
 /* Mobile test: force readable text in .container on small screens (temporary) */
 @media (max-width: 767.98px) {
-  .container,
-  .container * {
+  .resume-container,
+  .resume-container * {
     color: #212529 !important;
   }
 }
