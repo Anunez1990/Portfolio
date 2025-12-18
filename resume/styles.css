@@ -9,10 +9,10 @@
   text-decoration: none;
 }
 
-/**
+/*
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif;
-}**/
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+
 
 .flex-auto {
   flex: 0 0 auto;
@@ -44,8 +44,56 @@ body{
   background-color: whitesmoke;
 }
 
+
+/* -----------------------------
+   Header / Navigation
+   ----------------------------- */
+.navbar { font-weight: 700; }
+.menu {
+    background: linear-gradient(to left, #414345, #232526);
+    min-height: 100px;
+    width: 100%;
+    z-index: 1030;
+    border-bottom: 0;
+    box-shadow: none;
+    transition: all 0.5s ease-out;
+}
+
+.intro-text hr{
+    max-width: 350px;
+    border-top: solid 4px #212529;
+
+}
+
+#menu .navbar-container { padding-top: 1%; margin-left: auto; margin-right: auto; max-width: 95%; height: 100%; padding-top: 1.2%; }
+.navbar-container .navbar .navbar-brand { font-size: 2em; }
+
+/* Social icons container (desktop) */
+@media (min-width: 992px) {
+    .menu .navbar-container .mr-auto { display:flex; align-items:center; gap:0.6rem; }
+}
+
+/* Nav links */
+.navbar-nav .nav-link { font-size: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; line-height: 1.1; }
+@media (min-width:576px){ .navbar-nav .nav-link{ font-size:1.05rem; } }
+@media (min-width:768px){ .navbar-nav .nav-link{ font-size:1.1rem; } }
+@media (min-width:992px){ .navbar-nav .nav-link{ font-size:1.12rem; } }
+
+/* Toggler sizing */
+.navbar-toggler { padding:0.25rem 0.5rem; width:48px; height:48px; display:inline-flex; align-items:center; justify-content:center; }
+.navbar-toggler-icon { background-size:20px 20px; width:20px; height:20px; }
+@media(min-width:576px){ .navbar-toggler{ width:52px; height:52px; } .navbar-toggler-icon{ background-size:22px 22px; } }
+@media(min-width:768px){ .navbar-toggler{ width:56px; height:56px; } .navbar-toggler-icon{ background-size:24px 24px; } }
+@media(min-width:992px){ .navbar-toggler{ width:60px; height:60px; } .navbar-toggler-icon{ background-size:26px 26px; } }
+
+/* Social icon button */
+.btn-social { display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border:2px solid #fff; border-radius:50%; color:#fff; }
+.btn-outline { border:solid 3px #fff; font-size:20px; color:#fff; background:transparent; transition:all .3s ease-in-out; }
+.btn-outline:hover, .btn-outline:focus { border:solid 2px #fff; color:#2196F3; background:#fff; }
+
+
 /*--------Resume container ------*/
-.resume-container{
+.container{
   background-color: #fff;
 }
 
@@ -80,7 +128,7 @@ h3{
     margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 /*----------Social Icons---------------*/
-
+/*
 
 .btn-social {
     display: inline-block;
@@ -119,7 +167,7 @@ h3{
     color: #2196F3;
     background: #fff;
 }
-
+*/
 /*-----------Section line divider--------*/
 .resume-section-title {
     font-size: 1.25rem;
@@ -265,6 +313,6 @@ p{
 }
 
 /* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
-.resume-container {
+.container {
   color: #212529;
 }
