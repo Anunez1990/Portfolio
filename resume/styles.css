@@ -9,10 +9,10 @@
   text-decoration: none;
 }
 
-/*
+/**
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif;
+}**/
 
 .flex-auto {
   flex: 0 0 auto;
@@ -42,18 +42,12 @@ h1, h2, h3, h4, h5, h6 {
 /*---------Body-----------------*/
 body{
   background-color: whitesmoke;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*--------Resume container ------*/
 .resume-container{
   background-color: #fff;
-  margin-top: 15%;
-  margin-left: 7%;
-  margin-right: 7%;
-  margin-bottom: 7%;
 }
-
 
 
 /*-----------Fonts---------------------*/
@@ -199,176 +193,78 @@ div {
     top: 3px;
     width: 15px;
     height: 15px;
+    border: 4px solid #58677c;
+    background: white;
+    border-radius: 50%;
 }
 
-/* --------------------
-   Navbar, Social icons and Footer
-   Copied/adapted from root `css/style.css` and scoped for resume page
-   -------------------- */
+/*-------------------Resume Content----------------------*/
 
-/* Top menu wrapper (use both .menu and #menu to match markup) */
-.menu, #menu {
-  background: linear-gradient(to left, #414345, #232526);
-  min-height: 100px;
-  width: 100%;
-  z-index: 1030;
-  border-bottom: 0;
-  box-shadow: none;
-  transition: all 0.5s ease-out;
+
+/*---
+ color: #58677c;
+ ---*/
+
+.resume-company-name {
+    margin-left: auto;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
-/* Inner container padding */
-#menu .container, #main-container {
-  padding-top: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 95%;
-  height: 100%;
-}
-
-/* Match main index brand sizing and spacing */
-.container .navbar .navbar-brand, #menu .container .navbar .navbar-brand {
-  font-size: 1.8em;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* Brand sizing */
-#menu .navbar-brand {
-  color: #ffffff;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  font-size: 1.6em;
-}
-#menu .navbar-brand:hover { color: #e6f7ff; text-decoration: none; }
-
-/* Nav links (responsive scaling) */
-#menu .navbar-nav .nav-link {
-  font-size: 1rem;
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
-  line-height: 1.1;
-  color: rgba(255,255,255,0.95);
-  margin: 0 0.5rem;
-  font-weight: 500;
-}
-@media (min-width:576px){ #menu .navbar-nav .nav-link{ font-size:1.05rem; } }
-@media (min-width:768px){ #menu .navbar-nav .nav-link{ font-size:1.1rem; } }
-@media (min-width:992px){ #menu .navbar-nav .nav-link{ font-size:1.12rem; } }
-
-/* Responsive brand sizing to match main index */
-@media (max-width:600px){ .container .navbar .navbar-brand { font-size:1.1em; } }
-@media (min-width:576px){ .container .navbar .navbar-brand { font-size:1.4em; } }
-@media (min-width:768px){ .container .navbar .navbar-brand { font-size:1.6em; } }
-@media (min-width:992px){ .container .navbar .navbar-brand { font-size:1.8em; } }
-
-#menu .navbar-nav .nav-link:hover, #menu .navbar-nav .nav-link:focus { color:#cfeffd; }
-#menu .navbar-nav .nav-item.active .nav-link { color:#ffffff; font-weight:700; }
-
-/* Toggler sizing */
-#menu .navbar-toggler { padding:0.25rem 0.5rem; width:48px; height:48px; display:inline-flex; align-items:center; justify-content:center; border-color: rgba(255,255,255,0.18); }
-#menu .navbar-toggler-icon { background-size:20px 20px; width:20px; height:20px; }
-@media(min-width:576px){ #menu .navbar-toggler{ width:52px; height:52px; } #menu .navbar-toggler-icon{ background-size:22px 22px; } }
-@media(min-width:768px){ #menu .navbar-toggler{ width:56px; height:56px; } #menu .navbar-toggler-icon{ background-size:24px 24px; } }
-@media(min-width:992px){ #menu .navbar-toggler{ width:60px; height:60px; } #menu .navbar-toggler-icon{ background-size:26px 26px; } }
-
-/* Social icons (buttons) */
-.btn-social {
-  display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border:2px solid #fff; border-radius:50%; color:#fff; background:transparent;
-}
-.btn-outline { border:solid 3px #fff; font-size:20px; color:#fff; background:transparent; transition:all .3s ease-in-out; }
-.btn-outline:hover, .btn-outline:focus { border:solid 2px #fff; color:#2196F3; background:#fff; }
-
-/* Footer */
-footer, footer.text-center { color:#fff; }
-footer .footer-above { padding-top:50px; background:#090808; }
-footer .footer-below { padding:25px 0; background:#000; }
-/* keep resume footer links readable */
-.footer-below { color:#fff; font-size:0.95rem; }
-.footer-below a { color:#f1f9ff; }
-.footer-below a:hover { color:#ffffff; text-decoration:none; }
-
-/* Responsive/mobile overrides matching root site */
-@media (max-width:767.98px){
-  .menu, #menu { min-height:80px; }
-  #main-container { padding-top:10px; padding-bottom:8px; }
-  #menu .navbar-nav .nav-link { padding:0.35rem 0.25rem; }
-  .btn-social { width:22px; height:22px; line-height:15px; }
-}
-
-@media (min-width:576px){ .menu{ min-height:70px; } .btn-social { width:26px; height:26px; font-size:14px; line-height:22px; } }
-@media (min-width:768px){ .menu{ min-height:80px; } }
-
-/* Hide hamburger (navbar-toggler) on large/desktop viewports */
-@media (min-width: 992px) {
-  #menu .navbar-toggler { display: none !important; }
-}
-
-/* Make social icons horizontal on large/desktop viewports */
-@media (min-width: 992px) {
-  /* container holding social icons (follow root site pattern) */
-  #menu .container .mr-auto { display: flex; align-items: center; gap: 0.1rem; }
-  /* ensure each social button has consistent spacing */
-  #menu .container .mr-auto .btn-social { margin-left: 0.35rem; margin-right: 0.35rem; }
-}
-
-.resume-container * {
-  color: #212529 !important;
-}
-
-/* Responsive adjustments for Resume page across Bootstrap breakpoints
-   - XS: <576px (default mobile)
-   - SM: >=576px
-   - MD: >=768px
-   - LG: >=992px
-   - XL: >=1200px
-*/
-
-/* Mobile-first (base) */
-.resume-container{
-  box-sizing: border-box;
-  padding: 1.5rem 1rem; /* comfortable mobile padding */
-  margin: 0.5rem; /* small outer margin on very small screens */
-}
-.resume-container .profile-container { padding: 1rem; }
-.resume-container .picture { max-width: 140px; width: 40vw; height: auto; display:block; }
-.resume-container h1 { font-size: 1.8rem; }
-.resume-container p { font-size: 0.95rem; }
-.resume-timeline { padding-left: 1rem; }
-
-/* Small devices >=576px */
-@media (min-width: 576px) {
-  .resume-container{ padding: 2.5rem 2rem; margin: 1rem; }
-  .resume-container .picture { max-width: 160px; width: auto; }
-  .resume-container h1 { font-size: 2.4rem; }
-}
-
-/* Medium devices >=768px */
-@media (min-width: 768px) {
-  .resume-container{ padding: 3.5rem 3rem; margin: 2rem auto; max-width: 1100px; }
-  .resume-container .profile-container { display:flex; align-items:center; gap:1.5rem; }
-  .resume-container .picture { max-width: 200px; }
-  .resume-container h1 { font-size: 3rem; }
-  .resume-container p { font-size: 1rem; }
-  .resume-timeline { padding-left: 2rem; }
-}
-
-/* Large devices >=992px */
-@media (min-width: 992px) {
-  .resume-container{ padding: 4rem 3.5rem; margin: 2.5rem auto; max-width: 1200px; }
-  .resume-container .picture { max-width: 240px; }
-  .resume-container h1 { font-size: 3.6rem; }
-  .resume-container p { font-size: 1.05rem; }
-  /* make sure the side column keeps its sticky positioning without overlap */
-  .position-sticky{ top:2.5rem; }
-}
-
-/* Extra large devices >=1200px */
 @media (min-width: 1200px) {
-  .resume-container{ padding: 4.5rem 4rem; margin: 3rem auto; max-width: 1300px; }
-  .resume-container .picture { max-width: 280px; }
-  .resume-container h1 { font-size: 4rem; }
+    .resume-company-name {
+        margin-left: auto;
+    }
 }
 
-/* Minor helpers to prevent content overflow inside timeline items */
-.resume-timeline-item, .resume-section-content { word-wrap: break-word; }
+.resume-position-time {
+    font-size: 0.875rem;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.relevant-courses, li{
+      font-size: 0.875rem;
+}
+
+
+
+.resume-major{
+   font-weight: 600;
+   margin-bottom:0;
+   font-size: large;
+}
+
+/*----------WES Badge-------*/
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.badge-primary
+ {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+
+/* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
+.resume-container {
+  color: #212529;
+}
