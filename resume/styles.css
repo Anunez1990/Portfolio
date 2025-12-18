@@ -47,7 +47,12 @@ body{
 /*--------Resume container ------*/
 .resume-container{
   background-color: #fff;
+  margin-top: 15%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 7%;
 }
+
 
 
 /*-----------Fonts---------------------*/
