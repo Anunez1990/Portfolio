@@ -285,6 +285,19 @@ footer .footer-below { padding:25px 0; background:#000; }
 @media (min-width:576px){ .menu{ min-height:70px; } .btn-social { width:26px; height:26px; font-size:14px; line-height:22px; } }
 @media (min-width:768px){ .menu{ min-height:80px; } }
 
+/* Hide hamburger (navbar-toggler) on large/desktop viewports */
+@media (min-width: 992px) {
+  #menu .navbar-toggler { display: none !important; }
+}
+
+/* Make social icons horizontal on large/desktop viewports */
+@media (min-width: 992px) {
+  /* container holding social icons (follow root site pattern) */
+  #menu .container .mr-auto { display: flex; align-items: center; gap: 0.6rem; }
+  /* ensure each social button has consistent spacing */
+  #menu .container .mr-auto .btn-social { margin-left: 0.35rem; margin-right: 0.35rem; }
+}
+
 .resume-container * {
   color: #212529 !important;
 }
