@@ -50,26 +50,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.html#about">PROFILE <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../index.html#about">PROFILE </a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link " href="#interests">EXPERIENCE</a>
+                        <a class="nav-link " href="../index.html#interests">EXPERIENCE</a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link " href="#skills">SKILLS</a>
+                        <a class="nav-link " href="../index.html#skills">SKILLS</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link " href="#contact">CONTACT</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link " href="resume/index.html">RESUME</a>
+                        <a class="nav-link " href="../index.html#contact">CONTACT</a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link " href="projects/projects.html">PROJECTS</a>
+                        <a class="nav-link " href="#">RESUME</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link " href="../projects/projects.html">PROJECTS</a>
                     </li>
                 </ul>
             </div>
@@ -653,5 +653,48 @@
       </div>
     </footer>
     <script src="assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script>
+    /*
+        Handles menu style changes when the user scrolls. Keep this
+        logic lightweight by using native selectors and minimal DOM
+        operations to reduce repaint cost.
+    */
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+
+        if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            document.getElementById("menu").style.minHeight = "80px";
+            document.getElementById("menu").style.transitionDuration = "0.1s";
+            document.getElementById("main-container").style.paddingTop="5px";
+        }
+        else
+        {
+            document.getElementById("menu").style.minHeight = "100px";
+            document.getElementById("menu").style.transitionDelay = "0.1s";
+            document.getElementById("main-container").style.paddingTop="15px";
+        }
+        // update header offset when menu size changes on scroll
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+    }
+
+    /*
+        collapsemenu(): removes the `show` class from the navigation
+        container to collapse the mobile menu when a navigation item
+        is clicked.
+    */
+    function collapsemenu(){
+        document.querySelector(".navbar-collapse").classList.remove("show");
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
+            item.addEventListener('click', collapsemenu);
+        });
+        // set initial header offset after DOM ready
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+        // recalc on window resize
+        window.addEventListener('resize', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
+    });
+    </script>
   </body>
 </html>
