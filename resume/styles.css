@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 /*---------Body-----------------*/
 body{
   background-color: whitesmoke;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*--------Resume container ------*/
@@ -227,7 +228,7 @@ div {
 
 /* Match main index brand sizing and spacing */
 .container .navbar .navbar-brand, #menu .container .navbar .navbar-brand {
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
@@ -306,7 +307,7 @@ footer .footer-below { padding:25px 0; background:#000; }
 /* Make social icons horizontal on large/desktop viewports */
 @media (min-width: 992px) {
   /* container holding social icons (follow root site pattern) */
-  #menu .container .mr-auto { display: flex; align-items: center; gap: 0.6rem; }
+  #menu .container .mr-auto { display: flex; align-items: center; gap: 0.1rem; }
   /* ensure each social button has consistent spacing */
   #menu .container .mr-auto .btn-social { margin-left: 0.35rem; margin-right: 0.35rem; }
 }
@@ -314,3 +315,60 @@ footer .footer-below { padding:25px 0; background:#000; }
 .resume-container * {
   color: #212529 !important;
 }
+
+/* Responsive adjustments for Resume page across Bootstrap breakpoints
+   - XS: <576px (default mobile)
+   - SM: >=576px
+   - MD: >=768px
+   - LG: >=992px
+   - XL: >=1200px
+*/
+
+/* Mobile-first (base) */
+.resume-container{
+  box-sizing: border-box;
+  padding: 1.5rem 1rem; /* comfortable mobile padding */
+  margin: 0.5rem; /* small outer margin on very small screens */
+}
+.resume-container .profile-container { padding: 1rem; }
+.resume-container .picture { max-width: 140px; width: 40vw; height: auto; display:block; }
+.resume-container h1 { font-size: 1.8rem; }
+.resume-container p { font-size: 0.95rem; }
+.resume-timeline { padding-left: 1rem; }
+
+/* Small devices >=576px */
+@media (min-width: 576px) {
+  .resume-container{ padding: 2.5rem 2rem; margin: 1rem; }
+  .resume-container .picture { max-width: 160px; width: auto; }
+  .resume-container h1 { font-size: 2.4rem; }
+}
+
+/* Medium devices >=768px */
+@media (min-width: 768px) {
+  .resume-container{ padding: 3.5rem 3rem; margin: 2rem auto; max-width: 1100px; }
+  .resume-container .profile-container { display:flex; align-items:center; gap:1.5rem; }
+  .resume-container .picture { max-width: 200px; }
+  .resume-container h1 { font-size: 3rem; }
+  .resume-container p { font-size: 1rem; }
+  .resume-timeline { padding-left: 2rem; }
+}
+
+/* Large devices >=992px */
+@media (min-width: 992px) {
+  .resume-container{ padding: 4rem 3.5rem; margin: 2.5rem auto; max-width: 1200px; }
+  .resume-container .picture { max-width: 240px; }
+  .resume-container h1 { font-size: 3.6rem; }
+  .resume-container p { font-size: 1.05rem; }
+  /* make sure the side column keeps its sticky positioning without overlap */
+  .position-sticky{ top:2.5rem; }
+}
+
+/* Extra large devices >=1200px */
+@media (min-width: 1200px) {
+  .resume-container{ padding: 4.5rem 4rem; margin: 3rem auto; max-width: 1300px; }
+  .resume-container .picture { max-width: 280px; }
+  .resume-container h1 { font-size: 4rem; }
+}
+
+/* Minor helpers to prevent content overflow inside timeline items */
+.resume-timeline-item, .resume-section-content { word-wrap: break-word; }
