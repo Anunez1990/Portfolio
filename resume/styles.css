@@ -225,6 +225,13 @@ div {
   height: 100%;
 }
 
+/* Match main index brand sizing and spacing */
+.container .navbar .navbar-brand, #menu .container .navbar .navbar-brand {
+  font-size: 2em;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
 /* Brand sizing */
 #menu .navbar-brand {
   color: #ffffff;
@@ -247,6 +254,12 @@ div {
 @media (min-width:576px){ #menu .navbar-nav .nav-link{ font-size:1.05rem; } }
 @media (min-width:768px){ #menu .navbar-nav .nav-link{ font-size:1.1rem; } }
 @media (min-width:992px){ #menu .navbar-nav .nav-link{ font-size:1.12rem; } }
+
+/* Responsive brand sizing to match main index */
+@media (max-width:600px){ .container .navbar .navbar-brand { font-size:1.1em; } }
+@media (min-width:576px){ .container .navbar .navbar-brand { font-size:1.4em; } }
+@media (min-width:768px){ .container .navbar .navbar-brand { font-size:1.6em; } }
+@media (min-width:992px){ .container .navbar .navbar-brand { font-size:1.8em; } }
 
 #menu .navbar-nav .nav-link:hover, #menu .navbar-nav .nav-link:focus { color:#cfeffd; }
 #menu .navbar-nav .nav-item.active .nav-link { color:#ffffff; font-weight:700; }
