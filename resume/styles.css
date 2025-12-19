@@ -50,7 +50,7 @@ body{
    ----------------------------- */
 .navbar { font-weight: 700; }
 .menu {
-    background: linear-gradient(to left, #414345, #232526);
+    background: linear-gradient(to left, #414345, #0e3448);
     min-height: 100px;
     width: 100%;
     z-index: 1030;
@@ -101,9 +101,6 @@ body{
   background-color: #fff;
   margin-top: 15%;
 }
-
-/* Prevent footer's inner .container from inheriting the page background-color */
-footer .footer-below .container { background: transparent; padding: 0; }
 
 
 /*-----------Fonts---------------------*/
@@ -241,23 +238,6 @@ div {
     position: absolute;
 }
 
-/* -----------------------------
-   Footer (copied from main site)
-   ----------------------------- */
-footer { color:#fff; font-size:14px; }
-footer h3 { margin-bottom:18px; }
-footer .footer-above { padding-top:35px; background:#090808; }
-/* make footer slimmer and ensure white text */
-footer .footer-below { padding:10px 0; background:#000; }
-footer .footer-below .container { padding: 0 15px; }
-footer .footer-below .col-lg-12 { color:#fff; text-align:center; padding:6px 0; }
-
-/* Scroll-to-top styling (ensure same appearance as main index) */
-.scroll-top { z-index:1060; position:fixed; right:2%; bottom:2%; width:50px; height:50px; display: block !important; }
-.scroll-top .btn { width: 44px; height: 44px; padding: 0; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; }
-@media (min-width: 576px) { .scroll-top { right: 2.5%; bottom: 2.5%; } .scroll-top .btn { width: 48px; height: 48px; font-size: 18px; } }
-@media (min-width: 768px) { .scroll-top { right: 2.5%; bottom: 2.5%; } .scroll-top .btn { width: 52px; height: 52px; font-size: 20px; } }
-@media (min-width: 1200px) { .scroll-top { right: 3%; bottom: 3%; } .scroll-top .btn { width: 56px; height: 56px; font-size: 20px; } }
 
 .resume-timeline-item:before {
     content: "";
@@ -341,4 +321,52 @@ p{
 /* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
 .container {
   color: #212529;
+}
+
+
+/* -----------------------------
+   Footer
+   ----------------------------- */
+footer { color:#fff; }
+footer h3 { margin-bottom:30px; }
+footer .footer-above { padding-top:50px; background:#090808; }
+footer .footer-below { padding:25px 0; background: linear-gradient(to left, #0e3448, #414345); }
+
+
+/* -----------------------------
+   Components: Scroll Top, Resume Helpers
+   ----------------------------- */
+.scroll-top {
+    z-index:1060; /* above most UI chrome */
+    position:fixed;
+    right:2%;
+    bottom:2%;
+    width:50px;
+    height:50px;
+    display: block !important; /* ensure visible on all breakpoints */
+}
+
+/* Responsive sizing for scroll-to-top button */
+.scroll-top .btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+@media (min-width: 576px) {
+    .scroll-top { right: 2.5%; bottom: 2.5%; }
+    .scroll-top .btn { width: 48px; height: 48px; font-size: 18px; }
+}
+@media (min-width: 768px) {
+    .scroll-top { right: 2.5%; bottom: 2.5%; }
+    .scroll-top .btn { width: 52px; height: 52px; font-size: 20px; }
+}
+@media (min-width: 1200px) {
+    .scroll-top { right: 3%; bottom: 3%; }
+    .scroll-top .btn { width: 56px; height: 56px; font-size: 20px; }
 }
