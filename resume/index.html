@@ -1,546 +1,710 @@
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>ALEX V NUNEZ RESUME</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/blog/"
+    />
+    <script src="assets/js/color-modes.js"></script>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     
-    <!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Alex V. Nunez Portfolio</title>
-	<meta name="viewport" content="width=device-width">
-	<meta name="author" content="Alex V. Nunez" />
-	<meta name="description" content="Alex V. Nunez Software Developer Profile">
-	<meta name="keywords" content="Alex V. Nunez, Software, HTML, JavaScript, CSS, Java, coding, technology, developer">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/3414a1e80d.js" crossorigin="anonymous"></script>
 
-	<link rel="icon" type="image/png" href="../pictures/icon.png" sizes="16x16" />
+    <meta name="theme-color" content="#712cf9" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap"
+      rel="stylesheet"
+    />
 
-	<!--<CUSTOM STYLESHEET>-->
-	<link rel="stylesheet" href="../css/style.css">
+    <link href="styles.css" rel="stylesheet" />
+    
+    <!-- removed stray </style> -->
+    <style>html { scroll-behavior: smooth; }</style>
+  </head>
+  <body id="top">
 
-	<!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
-
-	<!--Font awesome-->
-	<script src="https://kit.fontawesome.com/3414a1e80d.js" crossorigin="anonymous"></script>
-
-	<!-- Boostrap CDN -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-
-
-</head> 
-
-<body>
-<!-- Navigation -->
+    <!-- Navigation -->
 <div class="menu fixed-top" id="menu">
-	<div class="container" id="main-container">
-		<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="navbar-container" id="main-container">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <a class="navbar-brand" id="navbar-brand" href="../index.html">ALEX V. NUNEZ</a>
+            <div class="mr-auto ">
+                <a href="https://github.com/Anunez1990" class="btn-social btn-outline"><i class="fab fa-github-square"></i></a>
+                <a href="https://www.linkedin.com/in/alex-nunez-585826110/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                <a href="mailto:anunezr1990@gmail.com" class="btn-social btn-outline"><i class="far fa-envelope"></i></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<a class="navbar-brand" id="navbar-brand" href="#">ALEX V. NUNEZ</a>
-			<div class="mr-auto ">
-				<a href="https://github.com/Anunez1990" class="btn-social btn-outline"><i class="fab fa-github-square"></i></a>
-				<a href="https://www.linkedin.com/in/alex-v-nunez-585826110/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-				<a href="mailto:anunezr1990@gmail.com" class="btn-social btn-outline"><i class="far fa-envelope"></i></a>
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html#about">PROFILE </a>
+                    </li>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link" href="../#about">PROFILE <span class="sr-only">(current)</span></a>
-					</li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="../index.html#interests">EXPERIENCE</a>
+                    </li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link " href="../#interests">EXPERIENCE</a>
-					</li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="../index.html#skills">SKILLS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="../index.html#contact">CONTACT</a>
+                    </li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link " href="../#skills">SKILLS</a>
-					</li>
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link " href="../#contact">CONTACT</a>
-					</li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="#">RESUME</a>
+                    </li>
 
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link " >RESUME</a>
-					</li>
-
-					<li class="nav-item active" onclick=collapsemenu();>
-						<a class="nav-link " href="../projects/projects.html">PROJECTS</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="../projects/projects.html">PROJECTS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </div>
+    <!-- MAIN CONTENT -->
+    <main class="container p-md-0">
+      <div class="profile-container m-0 row text-body-emphasis">
 
+          <!-- PROFILE INFORMATION -->
+            <div class="col-md-auto p-0">
+              <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
+                <img class="mt-lg-0 mt-sm-4 mr-3 img-fluid picture mx-auto" src="pictures/alex.png" alt="Alex Nunez portrait">
+               </div>
+            </div>
+            <div class="col text-white text-center">
+             <h1 class="p-md-2 mb-0">Alex V. Nunez</h1>
+              <p class="fs-3 p-md-0 mb-0">Electrical Engineer & Software Developer</p>
+              <p class="p-md-0 mb-1">Union, NJ 07083</p>
+              <ul class="list-unstyled">
+                  <li class="">
+                    <i class="far fa-envelope fa-fw " data-fa-transform="grow-3"></i>
+                      nunezr.alex@gmail.com
+                  </li>
+                  <li>
+                    <i class="fas fa-mobile-alt fa-fw " data-fa-transform="grow-6"></i>
+                     (862)-294-8919
+                  </li>
+              </ul>
+
+              <!--//Developer social media-->
+              <div class="mr-auto">
+                <a href="https://github.com/Anunez1990" class="btn-social btn-outline">
+                  <i class="fab fa-github-square"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/alex-nunez-585826110/" class="btn-social btn-outline">
+                  <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+                
+                <a href="https://anunez1990.github.io/Portfolio/" class="btn-social btn-outline">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+      </div>
+
+      <!-- OBJECTIVE -->
+      <div class="p-4">
+        <h3 class=" link-body-emphasis mb-1">CAREER SUMMARY</h3>
+              <h2 class="resume-section-title font-weight-bold pb-2 mb-2"></h2>
+              <p>
+               Multidisciplinary Electrical Engineer and Software Developer with expertise in automation, control systems, and full‑stack web development. Skilled in designing and maintaining IT infrastructure, implementing networking protocols, and supporting telecommunications systems. Published research in human‑machine interfaces and intelligent control systems demonstrates innovation at the intersection of engineering and computer science. Recognized with industry certifications in smart automation technologies, and fluent in English and Spanish. Passionate about artificial intelligence, machine learning, robotics, and computer vision.
+              </p>
+      </div>
+
+      <div class="row m-0">
+        <div class="col-md-8 pt-0 p-3">
+
+          <!-----------EDUCATION SECTION---------------->
+          <section class="m-2">
+            <h4 class="section-title">EDUCATION</h4>
+            <h2 class="resume-section-title font-weight-bold pb-2 mb-2"></h2>
+
+            <!----- First Education item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">TECHNICAL UNIVERSITY OF AMBATO</h5>
+                        <div class="resume-company-name">Ambato, Ecuador</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">July 2019</div>
+                    <p class="resume-major">Master of Engineering in Automation and Control Systems</p>
+                    <p class="relevant-courses"> <span style="font-weight:600">Relevant Courses:</span> Robotics, PLCs & HMIs, Industrial Computer Systems, Mechatronics, Optical Image Processing</p>
+                    <span class="badge bg-primary rounded-pill">WES EVALUATED</span>
+                </article>
+              </div>
+           </div>
+
+             <!----- Second Education item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">TECHNICAL UNIVERSITY OF AMBATO</h5>
+                        <div class="resume-company-name">Ambato, Ecuador</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">April 2015</div>
+                    <p class="resume-major">Bachelor of Engineering in Electronics and Communications</p>
+                    <p class="relevant-courses"> <span style="font-weight:600">Relevant Courses:</span> Programming I–III, Data Communication Networks, Control Systems, Microprocessors, Digital Signal Processing</p>
+                    <span class="badge bg-primary rounded-pill">WES EVALUATED</span>        
+                </article>
+              </div>
+           </div>
+
+            <!----- Third Education item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
+                        <div class="resume-company-name">Newark, New Jersey</div>
+                    </div>
+                    <div class="resume-position-time mb-3">December 2021</div>
+                    <p class="resume-major">Software Development Technology</p>    
+                    <p class="relevant-courses"> <span style="font-weight:600">Relevant Courses:</span> Object-Oriented Programming, Web Development, Database Design</p>
+                </article>
+              </div>
+            </div>
+          </section>
+          
+          <!-----------WORK EXPERIENCE SECTION---------------->
+          <section class="m-2">
+            <h4 class="section-title">WORK EXPERIENCE</h4>
+            <h2 class="resume-section-title font-weight-bold pb-2 mb-2"></h2>
+            <!----- First Job Description item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
+                        <div class="resume-company-name">Newark, New Jersey</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">Sep. 2023 – Present</div>
+                    <p class="resume-major">Technical Support Engineer</p>
+                    <div class="job-activities mt-2">
+                      <p class="m-3 mb-0 mt-0"><span style="font-weight:600; font-size: 0.82rem;">Activities Performed:</span></p>
+                      <ul>
+                          <li>Provide technical assistance to the technical support management and system users.</li>
+                          <li>Design and install local area networks and supporting software applications.</li>
+                          <li>Maintain and support the surveillance system equipment and supporting software.</li>
+                          <li>Maintain and support the access control system equipment and supporting software.</li>
+                          <li>Implement security procedures to protect hardware and software from theft, misuse, tampering, illegal and unauthorized use.</li>
+                      </ul>
+                    </div>
+                </article>
+              </div>
+           </div>
+
+           <!----- Second Job Description item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
+                        <div class="resume-company-name">Newark, New Jersey</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">Dec. 2021 – Sep. 2023</div>
+                    <p class="resume-major">Telecommunications Support Specialist</p>
+                    <div class="job-activities mt-2">
+                      <p class="m-3 mb-0 mt-0"><span style="font-weight:600; font-size: 0.82rem;">Activities Performed:</span></p>
+                      <ul>
+                        <li>Support PBX systems and telecommunication infrastructure.</li>
+                        <li>Install, arrange, and maintain telecommunications equipment and associated hardware.</li>
+                        <li>Test installed telephone systems, troubleshoot phone equipment failures and service issues.</li>
+                        <li>Install, support, and troubleshoot networking devices, cabling and software applications.</li>
+                        <li>Prepare and test new hardware and networking technologies for future deployments.</li>
+                        <li>Provide technical support to staff personnel.</li>
+                      </ul>
+                    </div>
+                </article>
+              </div>
+           </div>
+
+           <!----- Thrird Job Description item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
+                        <div class="resume-company-name">Newark, New Jersey</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">Jul. 2021 – Dec. 2021</div>
+                    <p class="resume-major">IT Technician</p>
+                    <div class="job-activities mt-2">
+                      <p class="m-3 mb-0 mt-0"><span style="font-weight:600; font-size: 0.82rem;">Activities Performed:</span></p>
+                      <ul>
+                          <li>Install and repair computer hardware, graphics cards, motherboards, and peripherals.</li>
+                          <li>Troubleshoot hardware, software, and network issues across campus systems.</li>
+                          <li>Assist staff with PC setup, cable installation, and software configuration.</li>
+                      </ul>
+                    </div>
+                </article>
+              </div>
+           </div>
+
+           <!----- Fourth Job Description item ------->
+            <div class="resume-timeline position-relative">
+              <div class="resume-timeline-item resume-section">
+                <article class="resume-section-content position-relative pb-4">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
+                        <div class="resume-company-name">Newark, New Jersey</div>
+                    </div>
+                    
+                    <div class="resume-position-time mb-3">Feb. 2020 - Jun. 2024</div>
+                    <p class="resume-major">Math & Computer Science Tutor</p>
+                    <div class="job-activities mt-2">
+                      <p class="m-3 mb-0 mt-0"><span style="font-weight:600; font-size: 0.82rem;">Activities Performed:</span></p>
+                      <ul>
+                          <li> Specialized in helping students understand mathematical concepts and develop problem solving skills through personalized instruction.</li>
+                          <li> Led review sessions that improved student performance.</li>
+                          <li> Assisted faculty during class sessions to reinforce technical concepts.</li>
+                      </ul>
+                    </div>
+                </article>
+              </div>
+           </div>
+          </section>
+
+          <!-----------PUBLICATIONS SECTION---------------->
+           <section class="m-2">
+             <h4 class="section-title">PUBLICATIONS</h4>
+            <h2 class="resume-section-title text-uppercase font-weight-bold pb-2 mb-2"></h2>
+            <ul>
+              <li>   
+               <p>Gustavo Caiza, G., Nuñez, A., Garcia, C. A., & Garcia, M. V. (2020). <a href="https://doi.org/10.1016/j.promfg.2020.02.089">Human Machine Interfaces Based on Open Source Web-Platform and OPC UA</a>. Procedia Manufacturing, 42, 307–314. https://doi.org/10.1016/j.promfg.2020.02.089</p>
+              </li>
+
+              <li>
+                <p>Nunez, A. V., Encalada, P., Garcia, C. A., Guilcapi, J. R., & Garcia, M. V. (2019). <a href="https://doi.org/10.1109/etcm48019.2019.9014859">Web-Platform for developing Man-Machine Interfaces based on OPC UA</a>. 2019 IEEE Fourth Ecuador Technical Chapters Meeting (ETCM), 1-6. https://doi.org/10.1109/etcm48019.2019.9014859</p>
+              </li>
+          
+              <li>
+                <p>Manzano, S., Escobar, A., Pallo, J. P., & Nuñez, A. (2015). <a href="https://doi.org/10.1109/chilecon.2015.7400396">Load dependent balancers of electronic sensors in SDN architecture</a>. 2015 CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (CHILECON), 323–328. https://doi.org/10.1109/chilecon.2015.7400396 </p>
+              </li>
+            </ul>
+            </section>
+
+            <!--AWARDS SECTION-->
+             <section class="m-2">
+             <h4 class="section-title">AWARDS</h4>
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-2 mb-2"></h2>
+               
+                 <ul class="mb-0">
+                   <!----- First Award ------->
+                  <li>
+                    <article class="resume-section-content position-relative pb-3">
+                        <div class="d-flex flex-column flex-md-row">
+                            <h5 class="font-weight-bold mb-1">Top Graduate Distinction</h5>
+                            <div class="resume-company-name">April, 2014</div>
+                        </div>
+
+                        <div class="resume-position-time mb-3">
+                          <span style="font-weight:600; font-size: 0.82rem;">Technical University of Ambato</span>
+                        </div> 
+
+                        <p> Awarded Diploma of Honor as the top graduate of the Electronics and Communications Engineering program, Faculty of Systems, Electronics, and Industrial Engineering, for the academic period September 2013 – February 2014.
+                        <br>
+                        <br>
+                        Award directly contributed to securing a merit-based scholarship for graduate studies in the Automation and Control Systems master’s program.
+                        </p>
+                    </article>
+                  </li>
+
+                   <!----- Second Award ------->
+                  <li>
+                    <article class="resume-section-content position-relative pb-3">
+                        <div class="d-flex flex-column flex-md-row">
+                            <h5 class="font-weight-bold mb-1">Graduated with Highest Honors</h5>
+                            <div class="resume-company-name">December, 2021</div>
+                        </div>
+
+                        <div class="resume-position-time mb-3">
+                          <span style="font-weight:600; font-size: 0.82rem;">Essex County College</span>
+                        </div> 
+
+                        <p> 
+                          Recognized for exceptional academic performance.
+                          <br>
+                          GPA: 4.00 / 4.00.
+                        </p>
+                    </article>
+                  </li>
+
+                   <!----- Third Award ------->
+                  <li>
+                    <article class="resume-section-content position-relative pb-0">
+                        <div class="d-flex flex-column flex-md-row">
+                            <h5 class="font-weight-bold mb-1">Member of Phi Theta Kappa Honor Society</h5>
+                        </div>
+
+                        <div class="resume-position-time mb-3">
+                          <span style="font-weight:600; font-size: 0.82rem;">Essex County College</span>
+                        </div> 
+
+                        <p> 
+                          Inducted during undergraduate studies in recognition of academic excellence and leadership potential.
+                        </p>
+                    </article>
+                  </li>
+                  </ul>
+            </section>
+
+            <!--CERTIFICATIONS SECTION-->
+             <section class="m-2">
+             <h4 class="section-title">CERTIFICATIONS</h4>
+            <h2 class="resume-section-title text-uppercase font-weight-bold pb-2 mb-2"></h2>
+            
+              <ul>
+                  <li>C-201 Electrical Systems 1 — Certified Gold (SACA)</li>
+                  <li>C-202 Electric Motor Control Systems 1 — Certified Gold (SACA)</li>
+                  <li>C-203 Variable Frequency Drive Systems 1 — Certified Gold (SACA)</li>
+                  <li>C-204 Motor Control Troubleshooting 1 — Certified Gold (SACA)</li>
+                  <li>C-205 Sensor Logic Systems 1 — Certified Gold (SACA)</li>
+                  <li>C-207 Programmable Controller Systems 1 — Certified Gold (SACA)</li>
+              </ul>
+            </section>
+         
+        </div>
+
+        <!-- SIDE SECTION -->
+
+        <div class="col-md-4 pt-0 p-4">
+          <div class="position-sticky" style="top: 2rem">
+            
+            <!-- Skills Section -->
+            <section class="resume-section skills-section mb-lg-5 mb-sm-0">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+                <div class="resume-section-content">
+                <div class="resume-skill-item">
+
+                    <!-- Programming Languages --->
+                    
+                    <div class="resume-skill-item pb-4">
+                        <h4 class="resume-skills-cat font-weight-bold">Programming Languages</h4>
+                      <ul class="list-unstyled">
+
+
+                          <li class="mb-2">
+                              <div class="resume-skill-name">Python</div>
+                              <div class="progress resume-progress">
+                                <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                          </li>
+
+                          <li class="mb-2">
+                            <div class="resume-skill-name">Java</div>
+                            <div class="progress resume-progress">
+                              <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </li>
+
+                          <li class="mb-2">
+                            <div class="resume-skill-name">C++</div>
+                            <div class="progress resume-progress">
+                              <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </li>
+
+
+                          <li class="mb-2">
+                              <div class="resume-skill-name">JavaScript</div>
+                                <div class="progress resume-progress">
+                                <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                          </li>
+
+                          <li class="mb-2">
+                              <div class="resume-skill-name">PHP</div>
+                                <div class="progress resume-progress">
+                                <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                          </li>
+
+                          <li class="mb-2">
+                              <div class="resume-skill-name">Visual Basic</div>
+                                <div class="progress resume-progress">
+                                <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                          </li>
+                      </ul>
+                    </div><!--//resume-skill-item-->
+
+                     <!-- Web Technologies -->
+                    <div class="resume-skill-item pb-4">
+                      <h4 class="resume-skills-cat font-weight-bold">Web Technologies</h4>
+                      <ul class="list-unstyled mb-4">
+                        
+                        <li class="mb-2">
+                          <div class="resume-skill-name">HTML</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">CSS</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">Bootstrap</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+                        
+                        <li class="mb-2">
+                          <div class="resume-skill-name">jQuery</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div><!--//resume-skill-item-->
+
+                  <!-- Software Skills Section -->
+
+                   <div class="resume-skill-item pb-4">
+                      <h4 class="resume-skills-cat font-weight-bold">Software</h4>
+                      <ul class="list-unstyled mb-4">
+                        
+                        <li class="mb-2">
+                          <div class="resume-skill-name">MATLAB</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">LabVIEW</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">OpenCV</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+                        
+
+                         <li class="mb-2">
+                          <div class="resume-skill-name">TIA Portal</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                         <li class="mb-2">
+                          <div class="resume-skill-name">Studio 5000</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">Proteus</div>
+                          <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">Android Studio</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+
+                        <li class="mb-2">
+                          <div class="resume-skill-name">Microsoft Office</div>
+                            <div class="progress resume-progress">
+                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </li>
+                        
+                       
+                      </ul>
+                    </div><!--//resume-skill-item-->
+
+
+                  <!-- Specialized Area Section -->
+                  <h4 class="resume-skills-cat font-weight-bold">Specialized Area</h4>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <div class="resume-skill-name">Access Control Systems</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+
+                    <li class="mb-2">
+                      <div class="resume-skill-name">PBX troubleshooting and management</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+
+                     <li class="mb-2">
+                      <div class="resume-skill-name">Networking</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="resume-skill-name">Communications</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+
+                    <li class="mb-2">
+                      <div class="resume-skill-name">PLC Programming</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+                   
+                    <li class="mb-2">
+                      <div class="resume-skill-name">Electrical and Electronic design</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </li>
+                    
+                    <li class="mb-2">
+                    <div class="resume-skill-name">Control Systems</div>
+                    <div class="progress resume-progress">
+                      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    </li>
+                  </ul>
+                </div><!--//resume-skill-item-->
+
+               <!--Others SKills Section-->
+
+                    <div class="resume-skill-item">
+                        <h4 class="resume-skills-cat font-weight-bold">Others</h4>
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><span class="badge bg-primary">Linux</span></li>
+                          <li class="list-inline-item"><span class="badge bg-primary">Windows</span></li>
+                          <li class="list-inline-item"><span class="badge bg-primary">MySQL</span></li>
+                          <li class="list-inline-item"><span class="badge bg-primary">SQLite</span></li>
+                        </ul>
+                    </div><!--//resume-skill-item-->
+                </div>
+              </section><!--//skills-section-->
+          
+
+            <!-- Languages Section -->
+            <div class="pb-4">
+              <h4 class="fst-italic">Languages</h4>
+              <ul class="list-unstyled mb-0">
+                <li>English — Professional Proficiency</li>
+                <li>Spanish — Native Speaker</li>
+              </ul>
+            </div>
+
+            <!-- Interest Section -->
+            <div class="pt-4">
+              <h4 class="fst-italic">Research & Interest</h4>
+              <ol class="list-unstyled">
+                <li>Artificial Intelligence, Machine Learning, Intelligent Control Systems, Robotics, Human-Machine Interfaces, and Computer Vision.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Alex V. Nunez
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll d-block">
+    <a class="btn btn-primary" href="#">
+        <i class="fa fa-chevron-up"></i>
+    </a>
 </div>
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg ">
-		    <header class="resume-header">
-			    <div class="media mt-lg-3 mt-md-5 mt-sm-5 pt-lg-0 pt-sm-5 pb-lg-0 pb-sm-3 flex-column flex-md-row ">
-				    <img class="mt-lg-0 mt-sm-4 mr-3 img-fluid picture mx-auto" src="../pictures/alex.png" alt="User_image">
-					<!--//Developer personal -info-->
-					<div class="media-body d-flex flex-column flex-md-row mx-auto mx-lg-0">
-					    <div class="col-lg-8 pl-lg-4 pt-lg-3  primary-info">
-						    <h1 class=" mt-0 mb-1 text-white text-uppercase name-resume">Alex V. Nunez</h1>
-						    <div class="title mb-3"><h5>Electronics Engineer and Software Developer</h5></div>
-							<div class="title mb-3"><h6>138 Elm St., Newark, NJ, 07105</h6></div>
-						    <ul class="list-unstyled">
-							    <li class="mb-2"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>anunezr1990@gmail.com</li>
-							    <li><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>862 294 8919</li>
-						    </ul>
-					    </div><!--//Developer personal -info-->
-						<!--//Developer social media-->
-					    <div class="col-lg-4 pl-lg-4 pt-lg-4 secondary-info ">
-						    <ul class="resume-social list-unstyled">
-				                <li class="mb-3"><a href="https://www.linkedin.com/in/alex-v-nunez-585826110/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>My linkedin site</a></li>
-				                <li class="mb-3"><a href="https://github.com/Anunez1990"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>My github site</a></li>
-								<li><a href="https://anunez1990.github.io/Portfolio/"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>My website</a></li>
-						    </ul>
-					    </div><!--//social media-->
-					    
-				    </div><!--//media-body-->
-			    </div><!--//media-->
-		    </header>
-		    <div class="resume-body ">
+    <script src="assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script>
+    /*
+        Handles menu style changes when the user scrolls. Keep this
+        logic lightweight by using native selectors and minimal DOM
+        operations to reduce repaint cost.
+    */
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
 
-			    <div class="row m-0">
-					<!--EDUCATION-->
-				    <div class="col-lg-9">
-					    <section class="resume-section experience-section p-3 mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">EDUCATION</h2>
-						    <div class="resume-section-content">
-							    <div class="resume-timeline position-relative">
-								    <article class="resume-timeline-item position-relative pb-4">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
-												<div class="resume-company-name">Newark, New Jersey</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">Expected Graduation:  December 2021</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>Software Development Technology, Newark, NJ</p>
-									    </div><!--//resume-timeline-item-desc-->
+        if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            document.getElementById("menu").style.minHeight = "80px";
+            document.getElementById("menu").style.transitionDuration = "0.1s";
+            document.getElementById("main-container").style.paddingTop="5px";
+        }
+        else
+        {
+            document.getElementById("menu").style.minHeight = "100px";
+            document.getElementById("menu").style.transitionDelay = "0.1s";
+            document.getElementById("main-container").style.paddingTop="15px";
+        }
+        // update header offset when menu size changes on scroll
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+    }
 
-								    </article><!--//resume-timeline-item-->
+    /*
+        collapsemenu(): removes the `show` class from the navigation
+        container to collapse the mobile menu when a navigation item
+        is clicked.
+    */
+    function collapsemenu(){
+        document.querySelector(".navbar-collapse").classList.remove("show");
+    }
 
-									<article class="resume-timeline-item position-relative pb-4">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1">TECHNICAL UNIVERSITY OF AMBATO </h5>
-												<div class="resume-company-name">Ambato, Ecuador</div>
-											</div><!--//row-->
-											<div class="resume-position-time">July, 2019</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="m-0">School of Systems, Electronic, and Industrial Engineering</p>
-											<p class="m-0">Master in Automation and Control Systems</p>
-											<a href="https://badges.wes.org/Evidence?i=105d0587-ab58-4496-8e9d-ff1fc1427bf9&type=us">	<span class="badge badge-primary badge-pill">WES EVALUATED</span></a>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-
-									<article class="resume-timeline-item position-relative pb-4">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1">TECHNICAL UNIVERSITY OF AMBATO</h5>
-												<div class="resume-company-name">Ambato, Ecuador</div>
-											</div><!--//row-->
-											<div class="resume-position-time">April, 2015</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="m-0">School of Systems, Electronic, and Industrial Engineering</p>
-											<p class="m-0">Bachelor of Electronics and Communications</p>
-											<a href="https://badges.wes.org/Evidence?i=105d0587-ab58-4496-8e9d-ff1fc1427bf9&type=us"><span class="badge badge-primary badge-pill">WES EVALUATED</span></a>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-
-							    </div><!--//resume-timeline-->
-
-							    
-						    </div>
-					    </section><!--//experience-section-->
-						<!--WORK EXPERIENCE-->
-						<section class="resume-section experience-section p-3 mb-5">
-							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">WORK EXPERIENCE</h2>
-							<div class="resume-section-content">
-								<div class="resume-timeline position-relative">
-									<article class="resume-timeline-item position-relative pb-5">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1">ESSEX COUNTY COLLEGE</h5>
-												<div class="resume-company-name">Newark, New Jersey</div>
-											</div><!--//row-->
-											<div class="resume-position-time">2020 - Present</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p>Embedded Math Tutor</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Activities Performed:</h4>
-											<ul>
-												<li>Specialized as an individual tutor by simplifying math concepts while coaching students to think critically to solve problems.</li>
-												<li>Conducted comprehensive test review sessions which contributed to an increase of more than 25 percent in some students' grades.</li>
-												<li>Facilitated numerous math courses as a class assistant by providing additional guidance to students during class.</li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1">SIAPROCI CIA LTDA.</h5>
-												<div class="resume-company-name">Ambato, Ecuador</div>
-											</div><!--//row-->
-											<div class="resume-position-time">May 2017 - Feb. 2018</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p>Project Manager Assistant </p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Activities Performed:</h4>
-											<ul>
-												<li>Recruitment employees </li>
-												<li>Technical support on electronic devices and infrastructure to employees</li>
-												<li>Manage employees’ salaries and human resources </li>
-												<li>Collaborated in the design of the electric and electronic blueprints </li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1">TECHNICAL UNIVERSITY OF AMBATO</h5>
-												<div class="resume-company-name">Ambato, Ecuador</div>
-											</div><!--//row-->
-											<div class="resume-position-time">Nov 2014 - Oct 2015</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p>Electronic Lab Assistant</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Activities Performed:</h4>
-											<ul>
-												<li>Maintenance of computer science equipment</li>
-												<li>Assistance students and professors about lab equipment usage</li>
-												<li>Repaired damaged hardware and software</li>
-												<li>Monitored the lab network </li>
-												<li>Installation and run new devices</li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-
-
-
-								</div><!--//resume-timeline-->
-
-
-							</div>
-						</section><!--//experience-section-->
-
-						<!--PUBLICATIONS-->
-						<section class="resume-section experience-section p-3 mb-5">
-							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">PUBLICATIONS</h2>
-							<div class="resume-section-content">
-								<div class="resume-timeline position-relative">
-									<article class="resume-timeline-item position-relative pb-1">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1"><a href="https://www.sciencedirect.com/science/article/pii/S2351978920306545?via%3Dihub">Human Machine Interfaces Based on Open Source Web-Platform and OPC UA.</a></h5>
-											</div><!--//row-->
-											<div class="resume-position-time">2020</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p>Gustavo Caiza, <b>Alex Nunez</b>, Carlos A. Garcia, Marcelo V. Garcia</p>
-										</div><!--//resume-timeline-item-desc-->
-									</article><!--//resume-timeline-item-->
-
-									<article class="resume-timeline-item position-relative pb-1">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1"><a href="https://www.semanticscholar.org/paper/Web-Platform-for-Developing-Man-Machine-Interfaces-Nuñez-Encalada/f1fdefbb40c080b0ee2df8fec574cb9b53d05765">Web-Platform for Developing Man-Machine Interfaces Based on OPC UA.</a></h5>
-											</div><!--//row-->
-											<div class="resume-position-time">2020</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p><b>Alex V. Nunez</b>, Patricio Encalada, Carlos A. Garcia, Jaime R. Guilcapi</p>
-										</div><!--//resume-timeline-item-desc-->
-									</article><!--//resume-timeline-item-->
-
-									<article class="resume-timeline-item position-relative pb-1">
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h5 class="font-weight-bold mb-1"><a href="https://scholar.google.com/scholar?q=Load+dependent+balancers+of+electronic+sensors+in+SDN+architecture&hl=es&as_sdt=0&as_vis=1&oi=scholart">Load Dependent Balancers of Electronic Sensors in SDN Architecture.</a></h5>
-											</div><!--//row-->
-											<div class="resume-position-time">2020</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p>Escobar, A., Manzano, S., Pallo, J. P., <b>Nunez, A.</b></p>
-										</div><!--//resume-timeline-item-desc-->
-									</article><!--//resume-timeline-item-->
-
-								</div><!--//resume-timeline-->
-							</div>
-						</section><!--//experience-section-->
-
-					</div>
-
-
-
-				    <div class="col-lg-3">
-					    <section class="resume-section skills-section mb-lg-5 mb-sm-0">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
-						    <div class="resume-section-content">
-								<div class="resume-skill-item">
-									<h4 class="resume-skills-cat font-weight-bold">Electronic Design</h4>
-									<ul class="list-unstyled mb-4">
-										<li class="mb-2">
-											<div class="resume-skill-name">PCB Design</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">PLC</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Labview</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-
-										<li class="mb-2">
-											<div class="resume-skill-name">MatLab</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 82%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Proteus</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 87%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Networking</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Communications</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Electronic Design</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Computer Vision</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Robotics</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Pneumatic</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-										<div class="resume-skill-name">Control Systems</div>
-										<div class="progress resume-progress">
-											<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-										</li>
-									</ul>
-								</div><!--//resume-skill-item-->
-						        <div class="resume-skill-item">
-							        <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-							        <ul class="list-unstyled mb-4">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">HTML/CSS/Bootstrap</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 74%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">JavaScript</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Node.js</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">jQuery</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						        
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-							        <ul class="list-unstyled">
-										<li class="mb-2">
-											<div class="resume-skill-name">PHP</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Python</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Node.js</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						        
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Others</h4>
-						            <ul class="list-inline">
-							            <li class="list-inline-item"><span class="badge badge-light">Linux</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Windows</span></li>
-										<li class="list-inline-item"><span class="badge badge-light">Android Studio</span></li>
-										<li class="list-inline-item"><span class="badge badge-light">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-light">Visual Basic</span></li>
-										<li class="list-inline-item"><span class="badge badge-light">C++</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Access</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Excel</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Word</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">AutoCAD</span></li>
-						            </ul>
-						        </div><!--//resume-skill-item-->
-						    </div><!--resume-section-content-->
-					    </section><!--//skills-section-->
-
-					    <section class="resume-section language-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">Spanish</span> <small class="text-muted font-weight-normal">(Native)</small></li>
-								    <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
-							    </ul>
-						    </div>
-					    </section><!--//language-section-->
-					    <section class="resume-section interests-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-1">Technology</li>
-								    <li class="mb-1">Engineering</li>
-								    <li class="mb-1">Sports</li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-					    
-				    </div>
-			    </div><!--//row-->
-
-
-		    </div><!--//resume-body-->
-	    </div>
-    </article>
-
-	<!-- Footer -->
-	<footer class="text-center">
-		<div class="footer-below">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						Copyright &copy; Alex V. Nunez 2020
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-	<div class="scroll-top page-scroll visible-xs visible-sm">
-		<a class="btn btn-primary" href="#">
-			<i class="fa fa-chevron-up"></i>
-		</a>
-	</div>
-	<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-	<!-- J-QUERY-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<script>
-		// Closes the Responsive Menu on Menu Item Click
-
-
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
-
-		if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-			document.getElementById("menu").style.minHeight = "80px";
-			document.getElementById("menu").style.transitionDuration = "0.1s";
-			document.getElementById("main-container").style.paddingTop="5px";
-
-		}
-		else
-		{
-			document.getElementById("menu").style.minHeight = "100px";
-			document.getElementById("menu").style.transitionDelay = "0.1s";
-			document.getElementById("main-container").style.paddingTop="15px";
-		}
-	}
-
-	function collapsemenu(){
-		document.querySelector(".navbar-collapse").classList.remove("show");
-	}
-
-</script>
-</body>
-</html> 
-
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
+            item.addEventListener('click', collapsemenu);
+        });
+        // set initial header offset after DOM ready
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+        // recalc on window resize
+        window.addEventListener('resize', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
+    });
+    </script>
+  </body>
+</html>

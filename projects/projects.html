@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alex V. Nunez Portfolio</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Alex V. Nunez" />
     <meta name="description" content="Alex V. Nunez Software Developer Profile">
     <meta name="keywords" content="Alex V. Nunez, Software, HTML, JavaScript, CSS, Java, coding, technology, developer">
@@ -16,15 +16,15 @@
     <!--<CUSTOM STYLESHEET>-->
     <link rel="stylesheet" href="../css/style.css">
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700;800&display=swap" rel="stylesheet">
+    <!--
+        Main stylesheet: `../css/style.css` centraliza estilos compartidos
+        (layout, utilidades y ajustes de tema). Mantén las reglas de diseño
+        aquí para asegurar consistencia entre páginas.
+    -->
 
-    <!--Instagram Font-->
+    <!-- Google Fonts (combinadas para reducir requests y mejorar rendimiento) -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200;300;700;800&family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 
 
     <!--Font awesome-->
@@ -58,24 +58,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link" href="../#about">PROFILE</a>
                     </li>
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link" href="../#interests">EXPERIENCE</a>
                     </li>
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="../#skills">SKILLS</a>
                     </li>
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="../#contact">CONTACT</a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="../resume/index.html">RESUME</a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="#">PROJECTS<span class="sr-only">Current</span></a>
                     </li>
                 </ul>
@@ -247,8 +247,10 @@
             </div>
         </div>
 
-
-
+        <div>
+            <h4><a href="https://github.com/Anunez1990"><em>Click the link for more projects...</em></a></h4>
+        </div>
+       
 
     </div>
 </section>
@@ -259,7 +261,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Alex V. Nunez 2020
+                    Copyright &copy; Alex V. Nunez
                 </div>
             </div>
         </div>
@@ -267,21 +269,23 @@
 </footer>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visible-sm">
+<div class="scroll-top page-scroll d-block d-md-none">
     <a class="btn btn-primary" href="#">
         <i class="fa fa-chevron-up"></i>
     </a>
 </div>
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-<!-- J-QUERY-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script>
-    // Closes the Responsive Menu on Menu Item Click
-
+    /*
+        UI behaviour:
+        - scrollFunction: adjusts the menu presentation based on scrolling.
+        - collapsemenu: closes the responsive menu when a nav item is selected.
+        Handlers are lightweight and use native DOM APIs for broad
+        compatibility on static hosts.
+    */
 
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
@@ -300,9 +304,19 @@
         }
     }
 
+    /*
+        collapsemenu(): removes the `show` class from `.navbar-collapse`
+        to close the mobile menu.
+    */
     function collapsemenu(){
         document.querySelector(".navbar-collapse").classList.remove("show");
     }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
+            item.addEventListener('click', collapsemenu);
+        });
+    });
 
 </script>
 

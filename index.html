@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alex V. Nunez Portfolio</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Alex V. Nunez" />
     <meta name="description" content="Alex V. Nunez Software Developer Profile">
     <meta name="keywords" content="Alex V. Nunez, Software, HTML, JavaScript, CSS, Java, coding, technology, developer">
@@ -17,15 +17,19 @@
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700;800&display=swap" rel="stylesheet">
+    <!--
+        Main stylesheet: `css/style.css` includes custom layout, color palette
+        and responsive rules. Keep project-specific CSS here to simplify
+        maintenance and to avoid modifying third-party library files.
+    -->
 
-    <!--Oleo Font-->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <!--
+        Google Fonts (combined request):
+        Loading multiple font families in a single request reduces HTTP
+        overhead and improves performance on initial load.
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200;300;700;800&family=Oleo+Script&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
 
     <!--Font awesome-->
     <script src="https://kit.fontawesome.com/3414a1e80d.js" crossorigin="anonymous"></script>
@@ -41,7 +45,6 @@
 <div class="menu fixed-top" id="menu">
     <div class="container" id="main-container">
         <nav class="navbar navbar-expand-lg navbar-dark ">
-
             <a class="navbar-brand" id="navbar-brand" href="#">ALEX V. NUNEZ</a>
             <div class="mr-auto ">
                 <a href="https://github.com/Anunez1990" class="btn-social btn-outline"><i class="fab fa-github-square"></i></a>
@@ -54,26 +57,26 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link" href="#about">PROFILE <span class="sr-only">(current)</span></a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="#interests">EXPERIENCE</a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="#skills">SKILLS</a>
                     </li>
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="#contact">CONTACT</a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="resume/index.html">RESUME</a>
                     </li>
 
-                    <li class="nav-item active" onclick=collapsemenu();>
+                    <li class="nav-item active">
                         <a class="nav-link " href="projects/projects.html">PROJECTS</a>
                     </li>
                 </ul>
@@ -249,45 +252,45 @@
                      data-animation="slide-in-right">
 
                     <div class="bar flex">
-                        <div class="bar fill" style="width:90%">
-                            <div class="tag bold flex ">PCB Design</div>
+                        <div class="bar fill" style="width:85%">
+                            <div class="tag bold flex ">Software Development</div>
                         </div>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:90%">
-                            <div class="tag bold flex ">PLC</div>
-                        </div>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:92%">
-                            <div class="tag bold flex ">Labview</div>
-                        </div>
-                        <span>92%</span>
+                        <span>85%</span>
                     </div>
 
                     <div class="bar flex">
                         <div class="bar fill" style="width:80%">
-                            <div class="tag bold flex ">Matlab</div>
+                            <div class="tag bold flex ">Web Design</div>
                         </div>
                         <span>80%</span>
                     </div>
 
                     <div class="bar flex">
-                        <div class="bar fill" style="width:70%">
+                        <div class="bar fill" style="width:80%">
+                            <div class="tag bold flex ">Database Systems</div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="bar flex">
+                        <div class="bar fill" style="width:90%">
+                            <div class="tag bold flex ">Operating Systems</div>
+                        </div>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="bar flex">
+                        <div class="bar fill" style="width:80%">
                             <div class="tag bold flex">Networking</div>
                         </div>
-                        <span>70%</span>
+                        <span>80%</span>
                     </div>
 
                     <div class="bar flex">
-                        <div class="bar fill" style="width:80%">
-                            <div class="tag bold flex " style="font-size: small">Electronic Design</div>
+                        <div class="bar fill" style="width:90%">
+                            <div class="tag bold flex ">Electronic Design</div>
                         </div>
-                        <span>80%</span>
+                        <span>90%</span>
                     </div>
 
 
@@ -300,76 +303,6 @@
 
 
 
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:90%">
-                            <div class="tag bold flex">HTML</div>
-                        </div>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:90%">
-                            <div class="tag bold flex">CSS</div>
-                        </div>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:85%">
-                            <div class="tag bold flex">JavaScript</div>
-                        </div>
-                        <span>85%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:85%">
-                            <div class="tag bold flex">PHP</div>
-                        </div>
-                        <span>85%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:65%">
-                            <div class="tag bold flex">React</div>
-                        </div>
-                        <span>65%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:65%">
-                            <div class="tag bold flex">Node.js</div>
-                        </div>
-                        <span>65%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:80%">
-                            <div class="tag bold flex">Java</div>
-                        </div>
-                        <span>80%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:70%">
-                            <div class="tag bold flex">C++</div>
-                        </div>
-                        <span>70%</span>
-                    </div>
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:65%">
-                            <div class="tag bold flex">Python</div>
-                        </div>
-                        <span>65%</span>
-                    </div>
-
-
-                    <div class="bar flex">
-                        <div class="bar fill" style="width:80%">
-                            <div class="tag bold flex" style="font-size: small">Android Studio</div>
-                        </div>
-                        <span>80%</span>
-                    </div>
 
                 </div>
             </div>
@@ -387,17 +320,24 @@
             </div>
         </div>
         <div class="row ">
-            <div class="col-lg-8 col-lg-offset-2 mr-auto ml-auto">
+                <div class="col-lg-8 mx-auto">
+                <!--
+                    Contact form notes:
+                    - The client-side `sendEmail()` uses Fetch to POST the form data to Formspree.
+                    - Replace the placeholder `<YOUR_FORM_ID>` in `sendEmail()` with your Formspree form ID to enable submissions.
+                    - We removed any client-side SMTP approach to avoid exposing credentials in the browser.
+                    - The form element keeps `id="contactForm"` and is reset after successful send.
+                -->
                 <form action="" method="POST" name="contact" id="contactForm" novalidate="" class="mr-auto ml-auto">
                     <div class="row control-group">
-                        <div class="form-group col-lg-12 col-xs-12 floating-label-form-group controls">
+                        <div class="form-group col-12 floating-label-form-group controls">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-lg-12 col-xs-12 floating-label-form-group controls">
+                        <div class="form-group col-12 floating-label-form-group controls">
                             <label>Email Address</label>
                             <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
                             <p class="help-block text-danger"></p>
@@ -408,7 +348,7 @@
                         <input type="text" name="_gotcha" style="display:none">
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-lg-12 col-xs-12 floating-label-form-group controls">
+                        <div class="form-group col-12 floating-label-form-group controls">
                             <label>Message</label>
                             <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false" spellcheck="false"></textarea><grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 1;" class="_1KJtL"></grammarly-extension>
                             <p class="help-block text-danger"></p>
@@ -417,7 +357,7 @@
                     <br>
                     <div id="success"></div>
                     <div class="row">
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-12">
                             <button type="button" class="btn btn-success btn-lg" onclick="sendEmail()">Send</button>
                         </div>
                     </div>
@@ -433,7 +373,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Alex V. Nunez 2020
+                    Copyright &copy; Alex V. Nunez
                 </div>
             </div>
         </div>
@@ -441,22 +381,32 @@
 </footer>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visible-sm">
+<div class="scroll-top page-scroll d-block">
     <a class="btn btn-primary" href="#">
         <i class="fa fa-chevron-up"></i>
     </a>
 </div>
 
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<!-- J-QUERY-->
+<!-- Load single jQuery then Bootstrap JS (bundle includes Popper) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- JavaScript library for email-->
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!--
+    Script responsibilities:
+    - Visual adjustments of the main menu during scroll.
+    - Close the responsive menu when a navigation item is selected.
+    - Submit the contact form to Formspree using a fetch POST request.
+
+    Note: To enable form submissions from GitHub Pages, sign up for
+    Formspree and replace `<YOUR_FORM_ID>` in the `endpoint` variable
+    inside `sendEmail()` with your Formspree form ID.
+-->
 
 <script>
-    // Closes the Responsive Menu on Menu Item Click
+    /*
+        Handles menu style changes when the user scrolls. Keep this
+        logic lightweight by using native selectors and minimal DOM
+        operations to reduce repaint cost.
+    */
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
 
@@ -471,29 +421,87 @@
             document.getElementById("menu").style.transitionDelay = "0.1s";
             document.getElementById("main-container").style.paddingTop="15px";
         }
+        // update header offset when menu size changes on scroll
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
     }
 
+    /*
+        collapsemenu(): removes the `show` class from the navigation
+        container to collapse the mobile menu when a navigation item
+        is clicked.
+    */
     function collapsemenu(){
         document.querySelector(".navbar-collapse").classList.remove("show");
     }
 
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.navbar-nav .nav-item').forEach(function(item){
+            item.addEventListener('click', collapsemenu);
+        });
+        // set initial header offset after DOM ready
+        if (typeof setHeaderOffset === 'function') setHeaderOffset();
+        // recalc on window resize
+        window.addEventListener('resize', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
+    });
+
+    /*
+        sendEmail(): gathers data from the `contact` form and posts it to
+        Formspree using fetch. The response is handled by showing a brief
+        message to the user and resetting the form on success.
+    */
     function sendEmail(){
-        var name = document.forms["contact"]["name"].value;
-        var email = document.forms["contact"]["email"].value;
-        var message = document.forms["contact"]["message"].value;
-        Email.send({
-            SecureToken : "938800cf-02c3-4c0c-9718-feb776598c92",
-            To : 'anunezr1990@gmail.com',
-            From : email,
-            Subject : name + " sent you a message",
-            Body : "Name: "+name+"<br/>"+"Email: "+email+"<br/>"+ "Message: "+ message,
-        }).then(
-            message => alert("Mail sent successfully")
-        );
-        document.forms["contact"]["name"].value="";
-        document.forms["contact"]["email"].value="";
-        document.forms["contact"]["message"].value="";
+        var form = document.forms["contact"];
+        // Replace <YOUR_FORM_ID> with your Formspree form ID (example: https://formspree.io/f/abcdxyz)
+        var endpoint = "https://formspree.io/f/xnneylpo";
+
+        var formData = new FormData(form);
+
+        fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(function(response){
+            if (response.ok) {
+                alert('Mail sent successfully');
+                form.reset();
+            } else {
+                response.json().then(function(data){
+                    alert((data && data.error) ? data.error : 'There was a problem sending the message.');
+                }).catch(function(){
+                    alert('There was a problem sending the message.');
+                });
+            }
+        }).catch(function(){
+            alert('Network error. Please try again later.');
+        });
     }
+
+    /*
+        setHeaderOffset(): compute padding-top for `.profile-header` so the
+        fixed `.menu` does not visually clip the profile image. Calculation
+        uses the menu height plus a fraction of the profile image height.
+        Runs on load, DOMContentLoaded, resize and after scroll adjustments.
+    */
+    function setHeaderOffset(){
+        try{
+            var menu = document.querySelector('.menu');
+            var header = document.querySelector('.profile-header');
+            var img = document.querySelector('.profile-header .profile-img');
+            if(!menu || !header) return;
+            var menuH = menu.offsetHeight || 0;
+            var imgH = img ? img.offsetHeight : 0;
+            var extra = 12; // small breathing room in px
+            var padding = Math.round(menuH + imgH * 0.6 + extra);
+            header.style.paddingTop = padding + 'px';
+        }catch(e){/* silent fallback */}
+    }
+
+    // ensure offset recalculation when page fully loads and when image finishes loading
+    window.addEventListener('load', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); });
+    var _pimg = document.querySelector('.profile-header .profile-img');
+    if(_pimg){ _pimg.addEventListener('load', function(){ if (typeof setHeaderOffset === 'function') setHeaderOffset(); }); }
 </script>
 </body>
 </html>
