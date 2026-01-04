@@ -211,6 +211,8 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
 /* -----------------------------
      6) Responsive rules (grouped)
      ----------------------------- */
+
+
 /* Navbar link sizes */
 @media (min-width:576px){ .navbar-nav .nav-link{ font-size:1.05rem; } }
 @media (min-width:768px){ .navbar-nav .nav-link{ font-size:1.1rem; } }
@@ -232,6 +234,7 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
 @media (min-width: 992px) {
     .btn-social { width: var(--social-size-lg); height: var(--social-size-lg); font-size:14px; }
     .social-icons { gap: 0.7rem; }
+    .navbar-container .navbar-brand { font-size: 1.8rem; padding-left: 0.6rem; }
 }
 
 /* Profile picture base and responsive tweaks */
@@ -246,7 +249,14 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
 @media (min-width: 1200px) { .scroll-top { right: 3%; bottom: 3%; } .scroll-top .btn { width: 56px; height: 56px; font-size: 20px; } }
 
 /* Desktop social icons container */
-@media (min-width: 992px) { .menu .container .mr-auto { display:flex; align-items:center; gap:0.6rem; } }
+@media (min-width: 992px) { 
+    .menu .container .mr-auto { 
+        display:flex; 
+        align-items:center; 
+        gap:0.6rem; 
+    }
+    
+ }
 
 /* Mobile / Small-screen fixes (refined) */
 @media (max-width: 767.98px) {
@@ -293,4 +303,9 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
     .btn-social-container {
         margin-right: auto;
     }
+
+/* Force navbar brand size across all viewports */
+.navbar-brand {
+    font-size: 2rem;
+}
 }
