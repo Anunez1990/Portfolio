@@ -283,12 +283,10 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
     .navbar-toggler { 
         transform: translateY(2px); 
         padding: 2%;
-        margin-right: 14%;
+        margin:auto;
         font-size: 17px;
     }
-    .navbar{
-    padding: .5rem 1rem;
-    }
+    
     .btn-outline{
         font-size: 12px;
     }
