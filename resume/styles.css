@@ -1,53 +1,75 @@
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
 
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  font-size: 2.25rem;
-}
-
-.blog-header-logo:hover {
-  text-decoration: none;
-}
-
-/*
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-
-
-.flex-auto {
-  flex: 0 0 auto;
-}
-
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
-}
-
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
-}
-
-/*
- * Blog posts
- */
-.blog-post {
-  margin-bottom: 4rem;
-}
-.blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #727272;
-}
-
-/*---------Body-----------------*/
-body{
-  background-color: whitesmoke;
-}
-
+/* ==========================
+     Bootstrap-style CSS order
+     1. Resets / Box model
+     2. Base (typography, body)
+     3. Layout (.container, .row)
+     4. Components (navbar, profile, buttons, timeline, badges)
+     5. Utilities / helpers
+     6. Responsive rules (grouped at bottom)
+     ========================== */
 
 /* -----------------------------
-   Header / Navigation
-   ----------------------------- */
+     1) Resets / Box model
+     ----------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* -----------------------------
+     2) Base / Typography
+     ----------------------------- */
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
+}
+.blog-header-logo:hover { text-decoration: none; }
+
+body {
+    background-color: whitesmoke;
+}
+
+h2 { line-height: 1.5; }
+h3 { color: #5590c0; }
+h4 { color: #5590c0; }
+
+p { margin-top: 0; margin-bottom: 1rem; }
+
+/* Small utility typography */
+.text-uppercase { text-transform: uppercase !important; }
+
+/* -----------------------------
+     3) Layout
+     ----------------------------- */
+.container {
+    background-color: #fff;
+    margin-top: 15%;
+    color: #212529; /* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.profile-container { background-color: #0b4472; }
+.profile-container .picture { border-radius: 4px; }
+
+/* -----------------------------
+     4) Components
+     ----------------------------- */
+/* Header / Navigation */
 .navbar { font-weight: 700; }
 .menu {
     background: linear-gradient(to left, #414345, #232526);
@@ -59,86 +81,43 @@ body{
     transition: all 0.5s ease-out;
 }
 
-
-.intro-text hr{
-    max-width: 350px;
-    border-top: solid 4px #212529;
-
-}
-
-.nav-link{
-    color: #fff !important;
-}
-
+.nav-link { color: #fff !important; }
 #menu .navbar-container { padding-top: 1%; margin-left: auto; margin-right: auto; max-width: 95%; height: 100%; padding-top: 1.2%; }
-.navbar-container .navbar .navbar-brand { font-size: 2em; }
-
-/* Nav links */
+.navbar-nav { margin-left: auto; margin-right: auto; }
 .navbar-nav .nav-link { font-size: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; line-height: 1.1; }
-@media (min-width:576px){ .navbar-nav .nav-link{ font-size:1.05rem; } }
-@media (min-width:768px){ .navbar-nav .nav-link{ font-size:1.1rem; } }
-@media (min-width:992px){ .navbar-nav .nav-link{ font-size:1.12rem; } }
 
-.navbar-nav{
-    margin-left: auto;
-    margin-right: auto;
+.intro-text hr { max-width: 350px; border-top: solid 4px #212529; }
+
+/* Social icons */
+.social-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
 }
+.social-icons.center { justify-content: center; }
 
-/*--------Resume container ------*/
-.container{
-  background-color: #fff;
-  margin-top: 15%;
-}
-
-
-/*-----------Fonts---------------------*/
-/*
-body,h1,h2,h3,h4,h5 {
-    font-family: 'Roboto', sans-serif;
-}*/
-
-h2{
-      line-height: 1.5;
-}
-h4{
-  color: #5590c0;
-}
-h3{
-  color: #5590c0;
+:root {
+    --social-size-xs: 20px;
+    --social-size-sm: 26px;
+    --social-size-md: 26px;
+    --social-size-lg: 26px;
 }
 
-/*---------------Profile Header---------*/
-.profile-container{
-  background-color: #0b4472;
-}
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-}
-/*----------Social Icons---------------*/
-
-/* Social icons container (desktop) */
-@media (min-width: 992px) {
-    .menu .container .mr-auto { display:flex; align-items:center; gap:0.6rem; }
-}
-/* Social icon button */
 .btn-social {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: clamp(22px, 2.4vw, 38px);
-    height: clamp(22px, 2.4vw, 38px);
+    width: var(--social-size-sm);
+    height: var(--social-size-sm);
     border: 2px solid #fff;
     border-radius: 50%;
     color: #fff;
     text-decoration: none;
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: 14px;
+    line-height: 1;
+    transition: transform .15s ease, background .15s ease, color .15s ease;
 }
+.btn-social:hover { transform: translateY(-2px); }
 .btn-social a { text-decoration: none; color: inherit; }
 .btn-outline {
     border: solid 3px #fff;
@@ -150,73 +129,8 @@ h3{
 }
 .btn-outline:hover, .btn-outline:focus { border: solid 2px #fff; color: #2196F3; background: #fff; text-decoration: none; }
 
-/* Mobile base tweaks for social buttons (legacy overrides kept minimal) */
-.btn-social { width:26px; height:26px; font-size:14px; line-height:22px; }
-
-@media (max-width:600px){
-    .btn-social { width:22px; height:22px; line-height:15px; }
-}
-
-@media (min-width:576px){
-    .btn-social { width:32px; height:32px; font-size:14px; line-height:22px; }
-}
-
-/*
-.btn-social {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    color: #2196F3;
-    border: 2px solid #fff;
-    border-radius: 10%;
-    text-align: center;
-    font-size: 18px;
-    line-height: 29px;
-    margin-left: 0.5em;
-
-}
-
-.btn:focus,
-.btn:active,
-.btn.active {
-    outline: 0;
-}
-
-
-.btn-outline {
-    border: solid 3px #fff;
-    font-size: 20px;
-    color: #1565C0;
-    background: #fff;
-    transition: all .3s ease-in-out;
-}
-
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 2px #fff;
-    color: #2196F3;
-    background: #fff;
-}
-    */
-
-/*-----------Section line divider--------*/
-.resume-section-title {
-    font-size: 1.25rem;
-    position: relative;
-}
-
-
-.text-uppercase {
-    text-transform: uppercase !important;
-}
-.pb-3 {
-    padding-bottom: 1rem !important;
-}
-.mb-3 {
-    margin-bottom: 1rem !important;
-}
+/* Resume section divider */
+.resume-section-title { font-size: 1.25rem; position: relative; }
 .resume-section-title:after {
     content: "";
     position: absolute;
@@ -226,35 +140,11 @@ h3{
     height: 1.5px;
     background: #89a4b2;
 }
-/*-------screen size---------*/
-@media (max-width: 767.98px) {
-    .profile-container .picture {
-        width: 120px;
-        border-radius: 4px;
-    }
-}
-@media (max-width: 767.98px) {
-    .profile-container {
-    height: auto;
-    padding: 5%;
-  }
-}
+.pb-3 { padding-bottom: 1rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
 
-/*---------------Resume Timeline----------*/
-.resume-timeline {
-    padding-left: 2rem;
-}
-
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-
+/* Resume timeline */
+.resume-timeline { padding-left: 2rem; }
 .resume-timeline:before {
     content: "";
     display: inline-block;
@@ -265,8 +155,6 @@ div {
     top: 4px;
     position: absolute;
 }
-
-
 .resume-timeline-item:before {
     content: "";
     display: inline-block;
@@ -280,91 +168,25 @@ div {
     border-radius: 50%;
 }
 
-/*-------------------Resume Content----------------------*/
+/* Resume content small helpers */
+.resume-company-name { margin-left: auto; font-size: 0.875rem; font-weight: 500; }
+@media (min-width: 1200px) { .resume-company-name { margin-left: auto; } }
+.resume-position-time { font-size: 0.875rem; }
+.relevant-courses, li { font-size: 0.875rem; }
+.resume-major { font-weight: 600; margin-bottom:0; font-size: large; }
 
+/* Badges */
+.badge { display: inline-block; padding: .25em .4em; font-size: 75%; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: .25rem; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+.badge-primary { color: #fff; background-color: #007bff; }
+.badge-pill { padding-right: .6em; padding-left: .6em; border-radius: 10rem; }
 
-/*---
- color: #58677c;
- ---*/
-
-.resume-company-name {
-    margin-left: auto;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-@media (min-width: 1200px) {
-    .resume-company-name {
-        margin-left: auto;
-    }
-}
-
-.resume-position-time {
-    font-size: 0.875rem;
-}
-
-p{
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.relevant-courses, li{
-      font-size: 0.875rem;
-}
-
-
-
-.resume-major{
-   font-weight: 600;
-   margin-bottom:0;
-   font-size: large;
-}
-
-/*----------WES Badge-------*/
-.badge {
-    display: inline-block;
-    padding: .25em .4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.badge-primary
- {
-    color: #fff;
-    background-color: #007bff;
-}
-
-.badge-pill {
-    padding-right: .6em;
-    padding-left: .6em;
-    border-radius: 10rem;
-}
-
-/* Ensure readable text on light containers when Bootstrap color-mode sets dark theme */
-.container {
-  color: #212529;
-}
-
-
-/* -----------------------------
-   Footer
-   ----------------------------- */
+/* Footer */
 footer { color:#fff; }
 footer h3 { margin-bottom:30px; }
 footer .footer-above { padding-top:50px; background:#090808; }
-footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #414345, #232526);
-   }
+footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #414345, #232526); }
 
-
-/* -----------------------------
-   Components: Scroll Top, Resume Helpers
-   ----------------------------- */
+/* Scroll-top */
 .scroll-top {
     z-index:1060; /* above most UI chrome */
     position:fixed;
@@ -374,28 +196,103 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
     height:50px;
     display: block !important; /* ensure visible on all breakpoints */
 }
+.scroll-top .btn { width: 44px; height: 44px; padding: 0; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; }
 
-/* Responsive sizing for scroll-to-top button */
-.scroll-top .btn {
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
+/* -----------------------------
+     5) Utilities / Misc (legacy overrides)
+     ----------------------------- */
+.flex-auto { flex: 0 0 auto; }
+.h-250 { height: 250px; }
+@media (min-width: 768px) { .h-md-250 { height: 250px; } }
+.blog-pagination { margin-bottom: 4rem; }
+.blog-post { margin-bottom: 4rem; }
+.blog-post-meta { margin-bottom: 1.25rem; color: #727272; }
+
+/* -----------------------------
+     6) Responsive rules (grouped)
+     ----------------------------- */
+/* Navbar link sizes */
+@media (min-width:576px){ .navbar-nav .nav-link{ font-size:1.05rem; } }
+@media (min-width:768px){ .navbar-nav .nav-link{ font-size:1.1rem; } }
+@media (min-width:992px){ .navbar-nav .nav-link{ font-size:1.12rem; } }
+
+/* Social icon sizing (responsive across breakpoints) */
+@media (max-width: 575.98px) {
+    .btn-social { width: var(--social-size-xs); height: var(--social-size-xs); font-size:8px; line-height:1; }
+    .social-icons { gap: 0.4rem; }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .btn-social { width: var(--social-size-sm); height: var(--social-size-sm); font-size:10px; }
+    .social-icons { gap: 0.5rem; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .btn-social { width: var(--social-size-md); height: var(--social-size-md); font-size:12px; }
+    .social-icons { gap: 0.6rem; }
+}
+@media (min-width: 992px) {
+    .btn-social { width: var(--social-size-lg); height: var(--social-size-lg); font-size:14px; }
+    .social-icons { gap: 0.7rem; }
 }
 
-@media (min-width: 576px) {
-    .scroll-top { right: 2.5%; bottom: 2.5%; }
-    .scroll-top .btn { width: 48px; height: 48px; font-size: 18px; }
+/* Profile picture base and responsive tweaks */
+@media (max-width: 767.98px) {
+    .profile-container .picture { width: 120px; }
+    .profile-container { height: auto; padding: 5%; }
 }
-@media (min-width: 768px) {
-    .scroll-top { right: 2.5%; bottom: 2.5%; }
-    .scroll-top .btn { width: 52px; height: 52px; font-size: 20px; }
+
+/* Scroll-top responsive */
+@media (min-width: 576px) { .scroll-top { right: 2.5%; bottom: 2.5%; } .scroll-top .btn { width: 48px; height: 48px; font-size: 18px; } }
+@media (min-width: 768px) { .scroll-top { right: 2.5%; bottom: 2.5%; } .scroll-top .btn { width: 52px; height: 52px; font-size: 20px; } }
+@media (min-width: 1200px) { .scroll-top { right: 3%; bottom: 3%; } .scroll-top .btn { width: 56px; height: 56px; font-size: 20px; } }
+
+/* Desktop social icons container */
+@media (min-width: 992px) { .menu .container .mr-auto { display:flex; align-items:center; gap:0.6rem; } }
+
+/* Mobile / Small-screen fixes (refined) */
+@media (max-width: 767.98px) {
+    :root { --mobile-header-height: 72px; }
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+        min-height: var(--mobile-header-height);
+        padding-top: 0.45rem;
+        padding-bottom: 0.45rem;
+    }
+
+    /* Ensure main content sits below the fixed header */ 
+    .container { margin-top: calc(var(--mobile-header-height) + 0.5rem); padding-left: 1rem; padding-right: 1rem; }
+    .navbar-container .navbar-brand { font-size: 1.4rem; padding-left: 0.6rem; }
+    .profile-container { padding-top: 1.2rem; }
+    /* nudge the profile picture below the fixed header */
+    .profile-container .picture { margin-top: 0.6rem; position: relative; z-index: 1; }
+    .navbar-toggler { z-index: 2100; margin-left: 0.5rem; }
+    .menu .navbar-container { padding-top: 0; }
+    /* Reduce oversized headings on small screens */
+    .blog-header-logo, h1 { font-size: 1.5rem; line-height:1.05; }
 }
-@media (min-width: 1200px) {
-    .scroll-top { right: 3%; bottom: 3%; }
-    .scroll-top .btn { width: 56px; height: 56px; font-size: 20px; }
+
+@media (max-width: 479.98px) {
+    :root { --mobile-header-height: 64px; }
+    .container { margin-top: calc(var(--mobile-header-height) + 5.7rem); }
+    .profile-container .picture { width: 92px; margin-top: 0.45rem; }
+    .blog-header-logo { font-size: 1.35rem; }
+    .navbar-brand { font-size: 1.1rem; }
+    .navbar-toggler { 
+        transform: translateY(2px); 
+        padding: 2%;
+        margin-right: 14%;
+        font-size: 17px;
+    }
+    .navbar{
+    padding: .5rem 1rem;
+    }
+    .btn-outline{
+        font-size: 12px;
+    }
+    .btn-social-container {
+        margin-right: auto;
+    }
 }
