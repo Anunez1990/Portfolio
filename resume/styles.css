@@ -218,6 +218,11 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
 @media (min-width:768px){ .navbar-nav .nav-link{ font-size:1.1rem; } }
 @media (min-width:992px){ .navbar-nav .nav-link{ font-size:1.12rem; } }
 
+/* Align navbar items to the right on large -> 4k screens */
+@media (min-width: 992px) and (max-width: 4096px) {
+    .navbar-nav { margin-left: auto; margin-right: 0; justify-content: flex-end; }
+}
+
 /* Social icon sizing (responsive across breakpoints) */
 @media (max-width: 575.98px) {
     .btn-social { width: var(--social-size-xs); height: var(--social-size-xs); font-size:8px; line-height:1; }
@@ -230,6 +235,21 @@ footer .footer-below { padding:25px 0;  background: linear-gradient(to left, #41
 @media (min-width: 768px) and (max-width: 991.98px) {
     .btn-social { width: var(--social-size-md); height: var(--social-size-md); font-size:12px; }
     .social-icons { gap: 0.6rem; }
+    /* Align social icons to the left on tablet view.
+       Use the same specificity as the centered rule to override it. */
+    .social-icons.center { justify-content: flex-start; margin-left: 0.75rem; }
+    /* Target the actual container used in the markup */
+    nav .mr-auto.btn-social-container,
+    .menu .mr-auto.btn-social-container,
+    .mr-auto.btn-social-container {
+        display: flex !important;
+        justify-content: flex-start !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        gap: 0.6rem;
+    }
+    /* Remove any top margin on the profile picture for tablet view */
+    .profile-container .picture { margin-top: 0 !important; }
 }
 @media (min-width: 992px) {
     .btn-social { width: var(--social-size-lg); height: var(--social-size-lg); font-size:14px; }
